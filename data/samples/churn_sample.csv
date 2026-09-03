@@ -1,0 +1,1001 @@
+customer_id,contract_id,churn_date,churn_reason,churn_probability,health_score_at_churn,behaviour_at_churn
+C05271,CT005271,2025-11-07,Poor Customer Experience,0.0007,83.21,Stable
+C13950,CT013950,2025-09-18,Poor Customer Experience,0.0119,48.74,Declining
+C01987,CT001987,2024-05-21,Business / Budget Constraints,0.0015,80.09,Stable
+C12418,CT012418,2025-12-24,Poor Customer Experience,0.106,5.3,Rapidly Declining
+C12467,CT012467,2024-04-24,Contract / Renewal Decision,0.0022,67.8,Stable
+C16713,CT016713,2025-09-02,Contract / Renewal Decision,0.0032,62.94,Stable
+C18821,CT018821,2025-12-13,Low Product Engagement,0.0108,38.49,Declining
+C07742,CT007742,2024-12-12,Low Product Engagement,0.0081,58.61,Declining
+C16212,CT016212,2025-04-02,Contract / Renewal Decision,0.0078,48.82,Stable
+C03107,CT003107,2025-10-25,Product / Technical Issues,0.0136,38.86,Declining
+C18748,CT018748,2024-10-29,Low Product Engagement,0.0448,0.0,Rapidly Declining
+C06367,CT006367,2025-07-18,Low Product Engagement,0.0657,25.12,Rapidly Declining
+C10151,CT010151,2025-07-13,Low Product Engagement,0.0553,0.0,Rapidly Declining
+C08182,CT008182,2025-04-16,Poor Customer Experience,0.0325,20.79,Declining
+C16534,CT016534,2025-10-24,Lack of Required Features,0.0137,38.95,Declining
+C15766,CT015766,2025-03-24,Business / Budget Constraints,0.0767,4.05,Rapidly Declining
+C07412,CT007412,2025-01-03,Low Product Engagement,0.01,41.06,Declining
+C04706,CT004706,2025-10-08,Low Product Engagement,0.0186,21.81,Declining
+C14355,CT014355,2025-06-25,Business / Budget Constraints,0.0067,28.64,Declining
+C14119,CT014119,2025-12-03,Low Product Engagement,0.0196,31.82,Declining
+C02060,CT002060,2025-11-19,Poor Customer Experience,0.0127,41.79,Stable
+C02932,CT002932,2024-11-22,Poor Customer Experience,0.002,72.06,Stable
+C17958,CT017958,2025-09-04,Poor Customer Experience,0.0079,25.19,Declining
+C05494,CT005494,2025-08-28,Lack of Required Features,0.0198,46.24,Declining
+C17245,CT017245,2025-02-22,Contract / Renewal Decision,0.0239,16.67,Rapidly Declining
+C12964,CT012964,2024-07-26,Contract / Renewal Decision,0.003,40.58,Stable
+C12057,CT012057,2024-08-28,Poor Customer Experience,0.0046,77.61,Stable
+C18718,CT018718,2025-03-07,Poor Customer Experience,0.0227,44.07,Declining
+C12430,CT012430,2024-08-03,Low Product Engagement,0.0175,51.83,Declining
+C19634,CT019634,2025-09-04,Business / Budget Constraints,0.0076,54.96,Declining
+C02919,CT002919,2025-07-11,Contract / Renewal Decision,0.0233,0.0,Declining
+C09491,CT009491,2024-11-01,Low Product Engagement,0.0017,84.33,Stable
+C10171,CT010171,2025-07-14,Product / Technical Issues,0.0238,43.99,Declining
+C11653,CT011653,2025-10-10,Contract / Renewal Decision,0.0089,38.84,Declining
+C04818,CT004818,2024-07-29,Business / Budget Constraints,0.0496,30.41,Rapidly Declining
+C10825,CT010825,2024-08-13,Contract / Renewal Decision,0.0141,54.51,Declining
+C11515,CT011515,2025-01-28,Product / Technical Issues,0.0955,12.53,Rapidly Declining
+C09068,CT009068,2025-10-11,Low Product Engagement,0.0337,22.41,Rapidly Declining
+C07054,CT007054,2025-08-04,Poor Customer Experience,0.0421,23.2,Rapidly Declining
+C11667,CT011667,2025-10-27,Low Product Engagement,0.0264,12.14,Rapidly Declining
+C06515,CT006515,2025-09-17,Poor Customer Experience,0.0061,52.55,Stable
+C18056,CT018056,2024-11-04,Poor Customer Experience,0.0361,27.83,Rapidly Declining
+C04276,CT004276,2024-12-10,Business / Budget Constraints,0.0333,31.06,Rapidly Declining
+C01603,CT001603,2025-04-10,Low Product Engagement,0.0069,55.06,Declining
+C12528,CT012528,2024-10-23,Low Product Engagement,0.0057,61.76,Stable
+C18537,CT018537,2025-12-10,Poor Customer Experience,0.0774,17.41,Rapidly Declining
+C19177,CT019177,2025-12-14,Poor Customer Experience,0.0009,96.76,Stable
+C02057,CT002057,2025-04-02,Low Product Engagement,0.0063,42.11,Declining
+C05899,CT005899,2024-12-13,Low Product Engagement,0.0248,52.21,Declining
+C00345,CT000345,2025-09-02,Low Product Engagement,0.0087,45.71,Declining
+C18972,CT018972,2024-09-26,Poor Customer Experience,0.05,44.66,Rapidly Declining
+C16966,CT016966,2025-05-10,Product / Technical Issues,0.0017,65.81,Stable
+C14579,CT014579,2026-01-05,Low Product Engagement,0.0421,6.71,Declining
+C17500,CT017500,2025-11-12,Low Product Engagement,0.0016,85.64,Stable
+C18019,CT018019,2024-07-10,Lack of Required Features,0.0122,44.05,Rapidly Declining
+C15029,CT015029,2025-02-28,Contract / Renewal Decision,0.0022,62.53,Stable
+C07775,CT007775,2025-05-17,Poor Customer Experience,0.0018,92.47,Improving
+C16163,CT016163,2025-09-10,Product / Technical Issues,0.0116,36.99,Declining
+C15466,CT015466,2025-04-16,Low Product Engagement,0.0165,30.6,Declining
+C04594,CT004594,2025-09-08,Low Product Engagement,0.0237,21.47,Declining
+C11343,CT011343,2025-08-07,Low Product Engagement,0.0029,69.12,Stable
+C11248,CT011248,2025-03-29,Lack of Required Features,0.0033,54.28,Stable
+C02585,CT002585,2024-08-14,Poor Customer Experience,0.0183,58.19,Declining
+C09432,CT009432,2025-04-29,Contract / Renewal Decision,0.0253,31.05,Declining
+C01039,CT001039,2024-10-21,Poor Customer Experience,0.02,40.04,Rapidly Declining
+C04781,CT004781,2025-04-15,Contract / Renewal Decision,0.0258,34.32,Declining
+C03064,CT003064,2025-01-11,Contract / Renewal Decision,0.0158,26.43,Rapidly Declining
+C17702,CT017702,2025-01-17,Low Product Engagement,0.006,50.23,Declining
+C07823,CT007823,2025-12-06,Business / Budget Constraints,0.0413,40.82,Declining
+C08679,CT008679,2024-11-14,Business / Budget Constraints,0.0035,63.65,Stable
+C10843,CT010843,2024-09-04,Low Product Engagement,0.0039,85.03,Stable
+C10125,CT010125,2024-12-13,Poor Customer Experience,0.0105,32.66,Declining
+C18190,CT018190,2025-05-02,Product / Technical Issues,0.0023,52.43,Stable
+C10471,CT010471,2024-08-01,Business / Budget Constraints,0.0016,77.54,Stable
+C11990,CT011990,2025-12-23,Business / Budget Constraints,0.0173,12.98,Declining
+C02981,CT002981,2025-05-26,Low Product Engagement,0.0371,0.82,Rapidly Declining
+C18390,CT018390,2025-02-15,Low Product Engagement,0.0057,47.97,Declining
+C00540,CT000540,2025-07-17,Product / Technical Issues,0.0386,20.79,Declining
+C09377,CT009377,2025-11-01,Product / Technical Issues,0.0077,26.2,Declining
+C06259,CT006259,2024-04-14,Lack of Required Features,0.0094,45.04,Declining
+C09590,CT009590,2024-05-28,Low Product Engagement,0.0024,87.81,Stable
+C07347,CT007347,2025-02-23,Low Product Engagement,0.005,82.1,Stable
+C05723,CT005723,2025-12-01,Low Product Engagement,0.0066,66.51,Stable
+C19872,CT019872,2025-06-18,Product / Technical Issues,0.0074,36.48,Declining
+C12934,CT012934,2025-09-12,Business / Budget Constraints,0.0147,25.79,Declining
+C11042,CT011042,2025-08-18,Poor Customer Experience,0.0085,47.94,Stable
+C11829,CT011829,2025-10-02,Low Product Engagement,0.0044,77.47,Stable
+C11247,CT011247,2025-04-11,Poor Customer Experience,0.12,27.24,Rapidly Declining
+C12978,CT012978,2025-04-24,Contract / Renewal Decision,0.0167,28.88,Declining
+C06619,CT006619,2025-06-25,Low Product Engagement,0.0072,49.76,Declining
+C16180,CT016180,2025-02-23,Low Product Engagement,0.0033,55.03,Declining
+C06095,CT006095,2025-03-11,Contract / Renewal Decision,0.0008,88.44,Stable
+C16032,CT016032,2024-07-15,Contract / Renewal Decision,0.0011,76.28,Stable
+C08592,CT008592,2025-07-07,Business / Budget Constraints,0.0165,11.21,Declining
+C18559,CT018559,2024-10-15,Poor Customer Experience,0.0074,58.41,Stable
+C06857,CT006857,2025-02-12,Poor Customer Experience,0.0221,30.61,Declining
+C19847,CT019847,2025-03-15,Low Product Engagement,0.0269,28.5,Declining
+C00464,CT000464,2025-05-02,Low Product Engagement,0.0283,22.77,Declining
+C00484,CT000484,2024-12-29,Business / Budget Constraints,0.0287,37.67,Declining
+C03467,CT003467,2025-11-11,Poor Customer Experience,0.0024,89.1,Stable
+C13095,CT013095,2024-11-14,Poor Customer Experience,0.0101,63.28,Declining
+C14283,CT014283,2025-05-12,Poor Customer Experience,0.0156,16.99,Declining
+C08169,CT008169,2025-11-13,Poor Customer Experience,0.0178,23.3,Declining
+C01924,CT001924,2025-04-19,Low Product Engagement,0.0016,89.58,Stable
+C19076,CT019076,2025-08-12,Product / Technical Issues,0.0208,70.45,Declining
+C17880,CT017880,2025-02-19,Contract / Renewal Decision,0.0129,58.21,Declining
+C00900,CT000900,2024-06-16,Business / Budget Constraints,0.0221,28.19,Declining
+C12196,CT012196,2025-09-21,Low Product Engagement,0.0186,46.19,Declining
+C00929,CT000929,2025-08-26,Business / Budget Constraints,0.0307,4.22,Rapidly Declining
+C05664,CT005664,2024-12-15,Contract / Renewal Decision,0.0051,71.3,Stable
+C04682,CT004682,2024-08-05,Lack of Required Features,0.0725,38.12,Rapidly Declining
+C18903,CT018903,2025-02-04,Product / Technical Issues,0.002,67.81,Stable
+C04380,CT004380,2025-05-28,Contract / Renewal Decision,0.002,76.71,Stable
+C12203,CT012203,2025-10-14,Product / Technical Issues,0.0147,35.68,Declining
+C03806,CT003806,2025-01-03,Contract / Renewal Decision,0.0333,27.05,Declining
+C15720,CT015720,2025-10-21,Lack of Required Features,0.0131,43.73,Declining
+C00592,CT000592,2025-03-18,Low Product Engagement,0.0347,11.3,Declining
+C04702,CT004702,2025-07-15,Contract / Renewal Decision,0.0135,36.03,Declining
+C03321,CT003321,2025-11-26,Poor Customer Experience,0.0012,72.05,Improving
+C04570,CT004570,2025-07-21,Contract / Renewal Decision,0.0353,8.87,Rapidly Declining
+C16197,CT016197,2025-12-08,Low Product Engagement,0.0094,40.13,Declining
+C00328,CT000328,2025-06-15,Low Product Engagement,0.0232,47.44,Declining
+C16285,CT016285,2025-10-29,Product / Technical Issues,0.0353,0.0,Rapidly Declining
+C17156,CT017156,2024-07-24,Low Product Engagement,0.0196,46.76,Declining
+C14675,CT014675,2025-01-27,Business / Budget Constraints,0.0048,48.17,Declining
+C09649,CT009649,2025-10-16,Product / Technical Issues,0.0058,68.06,Stable
+C02947,CT002947,2025-10-04,Product / Technical Issues,0.0021,75.03,Stable
+C01471,CT001471,2025-07-30,Lack of Required Features,0.0039,53.47,Stable
+C16619,CT016619,2025-04-29,Low Product Engagement,0.0183,34.95,Rapidly Declining
+C05972,CT005972,2024-07-09,Low Product Engagement,0.017,43.79,Rapidly Declining
+C16772,CT016772,2024-07-19,Contract / Renewal Decision,0.0009,62.4,Stable
+C04206,CT004206,2025-06-02,Lack of Required Features,0.0358,19.7,Rapidly Declining
+C11304,CT011304,2025-06-30,Contract / Renewal Decision,0.0072,46.39,Declining
+C13688,CT013688,2024-12-09,Low Product Engagement,0.0164,58.37,Declining
+C15151,CT015151,2025-05-22,Poor Customer Experience,0.0211,43.12,Declining
+C09131,CT009131,2025-11-28,Poor Customer Experience,0.0166,63.62,Declining
+C15818,CT015818,2025-06-25,Poor Customer Experience,0.0049,74.1,Stable
+C16788,CT016788,2026-01-05,Poor Customer Experience,0.0021,64.52,Stable
+C16170,CT016170,2025-08-27,Contract / Renewal Decision,0.0027,53.26,Declining
+C17428,CT017428,2025-11-25,Poor Customer Experience,0.0027,89.0,Stable
+C07716,CT007716,2024-08-13,Low Product Engagement,0.0244,37.71,Rapidly Declining
+C12274,CT012274,2025-05-02,Contract / Renewal Decision,0.0111,61.83,Declining
+C04673,CT004673,2025-04-02,Low Product Engagement,0.0125,58.97,Declining
+C09321,CT009321,2025-09-03,Poor Customer Experience,0.0734,14.47,Rapidly Declining
+C12832,CT012832,2025-10-20,Product / Technical Issues,0.0051,71.49,Stable
+C01951,CT001951,2025-10-28,Poor Customer Experience,0.0011,64.37,Stable
+C07542,CT007542,2025-03-26,Business / Budget Constraints,0.0098,51.6,Declining
+C19400,CT019400,2025-09-23,Business / Budget Constraints,0.0089,57.44,Declining
+C00077,CT000077,2024-11-07,Low Product Engagement,0.0049,62.22,Stable
+C06603,CT006603,2025-12-05,Low Product Engagement,0.0034,74.75,Stable
+C08483,CT008483,2024-04-03,Contract / Renewal Decision,0.0018,88.61,Stable
+C17328,CT017328,2025-12-06,Low Product Engagement,0.006,56.34,Stable
+C09943,CT009943,2025-09-15,Product / Technical Issues,0.0048,37.99,Stable
+C11429,CT011429,2025-10-31,Product / Technical Issues,0.0025,84.08,Stable
+C12548,CT012548,2025-07-25,Low Product Engagement,0.0076,55.9,Stable
+C12764,CT012764,2024-11-21,Business / Budget Constraints,0.0063,58.67,Declining
+C04510,CT004510,2025-03-14,Low Product Engagement,0.0756,22.27,Rapidly Declining
+C17807,CT017807,2025-08-11,Low Product Engagement,0.0256,23.45,Declining
+C11074,CT011074,2025-08-05,Contract / Renewal Decision,0.0274,29.71,Rapidly Declining
+C15838,CT015838,2025-09-02,Contract / Renewal Decision,0.0012,88.62,Stable
+C13752,CT013752,2025-07-11,Low Product Engagement,0.0132,44.91,Declining
+C11169,CT011169,2024-10-24,Poor Customer Experience,0.0005,98.01,Improving
+C15343,CT015343,2024-08-14,Poor Customer Experience,0.0115,46.45,Declining
+C18393,CT018393,2025-04-07,Contract / Renewal Decision,0.0066,61.04,Declining
+C03925,CT003925,2025-12-21,Low Product Engagement,0.042,0.0,Rapidly Declining
+C10621,CT010621,2025-05-29,Poor Customer Experience,0.0409,11.01,Declining
+C08595,CT008595,2024-09-15,Lack of Required Features,0.0024,73.76,Stable
+C06832,CT006832,2024-11-25,Poor Customer Experience,0.0247,29.74,Rapidly Declining
+C04021,CT004021,2025-05-02,Low Product Engagement,0.0206,33.08,Declining
+C08659,CT008659,2025-06-11,Low Product Engagement,0.0426,25.91,Rapidly Declining
+C02501,CT002501,2025-03-20,Low Product Engagement,0.0264,25.79,Declining
+C15624,CT015624,2025-08-06,Low Product Engagement,0.0241,33.85,Declining
+C09276,CT009276,2025-06-15,Poor Customer Experience,0.0255,51.98,Declining
+C11583,CT011583,2025-01-31,Poor Customer Experience,0.003,49.68,Stable
+C05854,CT005854,2024-05-01,Contract / Renewal Decision,0.0114,46.85,Declining
+C18971,CT018971,2025-12-04,Business / Budget Constraints,0.0011,93.11,Improving
+C08894,CT008894,2025-08-07,Poor Customer Experience,0.0329,53.06,Declining
+C17866,CT017866,2025-10-09,Low Product Engagement,0.0411,32.32,Rapidly Declining
+C12508,CT012508,2025-12-06,Contract / Renewal Decision,0.0803,0.93,Rapidly Declining
+C16049,CT016049,2025-03-12,Product / Technical Issues,0.0006,80.96,Stable
+C14536,CT014536,2024-11-08,Poor Customer Experience,0.0196,24.87,Rapidly Declining
+C10379,CT010379,2024-05-19,Lack of Required Features,0.0031,79.62,Stable
+C13491,CT013491,2024-12-20,Poor Customer Experience,0.0226,53.87,Declining
+C14844,CT014844,2025-07-03,Product / Technical Issues,0.0189,20.66,Rapidly Declining
+C03260,CT003260,2025-08-31,Low Product Engagement,0.0062,71.98,Stable
+C08360,CT008360,2025-05-01,Poor Customer Experience,0.0335,8.72,Rapidly Declining
+C15993,CT015993,2024-10-19,Poor Customer Experience,0.0079,56.71,Declining
+C07233,CT007233,2024-09-11,Business / Budget Constraints,0.0212,35.91,Declining
+C10032,CT010032,2024-10-16,Product / Technical Issues,0.0242,19.55,Rapidly Declining
+C06887,CT006887,2025-04-30,Poor Customer Experience,0.0535,26.63,Declining
+C19167,CT019167,2024-12-20,Business / Budget Constraints,0.0096,71.06,Declining
+C15144,CT015144,2025-08-24,Lack of Required Features,0.003,94.35,Stable
+C03163,CT003163,2024-11-27,Low Product Engagement,0.0031,87.54,Stable
+C13653,CT013653,2025-08-24,Contract / Renewal Decision,0.0211,43.53,Declining
+C14110,CT014110,2024-12-15,Contract / Renewal Decision,0.0176,31.86,Rapidly Declining
+C08676,CT008676,2024-10-16,Business / Budget Constraints,0.0105,56.06,Declining
+C08034,CT008034,2024-11-07,Contract / Renewal Decision,0.0125,46.24,Declining
+C06692,CT006692,2025-05-31,Low Product Engagement,0.0481,20.42,Declining
+C17999,CT017999,2025-10-14,Product / Technical Issues,0.0007,70.89,Stable
+C00017,CT000017,2025-10-16,Business / Budget Constraints,0.0143,49.37,Declining
+C17524,CT017524,2025-08-30,Lack of Required Features,0.0105,49.84,Declining
+C07492,CT007492,2025-07-06,Poor Customer Experience,0.0048,48.32,Declining
+C05576,CT005576,2025-11-26,Low Product Engagement,0.012,33.85,Declining
+C19119,CT019119,2025-08-07,Poor Customer Experience,0.0286,5.74,Rapidly Declining
+C07244,CT007244,2024-12-13,Contract / Renewal Decision,0.0129,22.51,Declining
+C11861,CT011861,2025-10-18,Low Product Engagement,0.0107,14.83,Declining
+C01896,CT001896,2024-10-15,Low Product Engagement,0.0018,73.89,Stable
+C17461,CT017461,2025-01-08,Product / Technical Issues,0.0266,12.61,Rapidly Declining
+C13281,CT013281,2025-06-10,Poor Customer Experience,0.0445,8.51,Rapidly Declining
+C06202,CT006202,2025-06-06,Product / Technical Issues,0.0271,30.97,Declining
+C07171,CT007171,2025-07-27,Product / Technical Issues,0.0583,2.15,Rapidly Declining
+C10615,CT010615,2025-12-13,Poor Customer Experience,0.0102,33.83,Declining
+C00042,CT000042,2025-09-25,Lack of Required Features,0.0012,78.48,Stable
+C08358,CT008358,2025-04-26,Contract / Renewal Decision,0.0022,83.76,Stable
+C00520,CT000520,2025-05-19,Low Product Engagement,0.0135,59.07,Declining
+C12103,CT012103,2025-12-09,Lack of Required Features,0.0343,0.0,Rapidly Declining
+C16923,CT016923,2025-05-31,Business / Budget Constraints,0.0504,37.64,Rapidly Declining
+C07512,CT007512,2024-09-23,Poor Customer Experience,0.0032,56.84,Stable
+C13182,CT013182,2024-06-25,Product / Technical Issues,0.0067,32.55,Declining
+C02030,CT002030,2024-07-24,Low Product Engagement,0.0353,32.89,Rapidly Declining
+C09685,CT009685,2025-09-16,Poor Customer Experience,0.0228,8.08,Declining
+C01647,CT001647,2025-05-26,Contract / Renewal Decision,0.0343,35.81,Declining
+C00456,CT000456,2024-09-24,Poor Customer Experience,0.0142,40.39,Declining
+C02817,CT002817,2025-04-02,Product / Technical Issues,0.0348,14.87,Rapidly Declining
+C16576,CT016576,2025-10-26,Business / Budget Constraints,0.012,33.97,Declining
+C02785,CT002785,2024-12-13,Low Product Engagement,0.015,40.29,Declining
+C05471,CT005471,2025-02-07,Low Product Engagement,0.0136,25.16,Declining
+C07992,CT007992,2025-11-18,Business / Budget Constraints,0.0015,83.15,Stable
+C16175,CT016175,2024-12-08,Poor Customer Experience,0.0007,80.11,Stable
+C18177,CT018177,2025-09-19,Product / Technical Issues,0.0031,82.78,Stable
+C03705,CT003705,2025-06-25,Product / Technical Issues,0.0405,42.4,Declining
+C00819,CT000819,2025-01-12,Business / Budget Constraints,0.0178,41.81,Declining
+C14617,CT014617,2024-08-25,Lack of Required Features,0.0214,46.31,Declining
+C15272,CT015272,2024-10-22,Poor Customer Experience,0.0019,74.55,Stable
+C01712,CT001712,2025-05-20,Business / Budget Constraints,0.0049,34.6,Stable
+C16613,CT016613,2025-11-01,Product / Technical Issues,0.0065,75.28,Stable
+C04958,CT004958,2024-12-21,Poor Customer Experience,0.0031,55.39,Stable
+C11268,CT011268,2025-02-15,Poor Customer Experience,0.0123,28.95,Declining
+C12248,CT012248,2024-10-11,Low Product Engagement,0.005,63.91,Declining
+C17197,CT017197,2024-08-09,Low Product Engagement,0.0005,100.0,Improving
+C12366,CT012366,2024-04-18,Lack of Required Features,0.0029,68.79,Declining
+C01541,CT001541,2024-04-30,Lack of Required Features,0.0079,65.64,Declining
+C04596,CT004596,2025-04-15,Business / Budget Constraints,0.0181,24.01,Rapidly Declining
+C16106,CT016106,2025-10-24,Product / Technical Issues,0.0218,25.2,Rapidly Declining
+C06397,CT006397,2025-07-04,Contract / Renewal Decision,0.0034,78.17,Stable
+C03644,CT003644,2024-04-18,Business / Budget Constraints,0.0024,59.9,Stable
+C15787,CT015787,2026-01-05,Lack of Required Features,0.0047,40.61,Declining
+C17663,CT017663,2024-11-21,Lack of Required Features,0.0051,72.88,Declining
+C18630,CT018630,2025-06-28,Product / Technical Issues,0.0059,51.4,Declining
+C09352,CT009352,2025-02-18,Business / Budget Constraints,0.0057,71.06,Declining
+C13414,CT013414,2024-06-08,Contract / Renewal Decision,0.0045,62.45,Stable
+C07578,CT007578,2025-08-10,Contract / Renewal Decision,0.0892,0.0,Rapidly Declining
+C11356,CT011356,2025-12-27,Poor Customer Experience,0.0225,48.86,Declining
+C16651,CT016651,2025-02-10,Poor Customer Experience,0.0245,36.61,Declining
+C04163,CT004163,2025-05-03,Lack of Required Features,0.0131,59.79,Declining
+C07503,CT007503,2025-05-26,Low Product Engagement,0.0218,41.94,Declining
+C15554,CT015554,2025-05-24,Lack of Required Features,0.0269,23.48,Rapidly Declining
+C18612,CT018612,2025-04-24,Business / Budget Constraints,0.0062,44.42,Declining
+C14075,CT014075,2024-12-18,Low Product Engagement,0.0365,43.09,Declining
+C05767,CT005767,2025-02-10,Product / Technical Issues,0.0555,20.53,Rapidly Declining
+C12284,CT012284,2025-04-19,Product / Technical Issues,0.0137,82.4,Declining
+C05185,CT005185,2025-10-19,Product / Technical Issues,0.0489,0.0,Rapidly Declining
+C15475,CT015475,2025-09-26,Contract / Renewal Decision,0.0047,67.67,Stable
+C10203,CT010203,2025-11-08,Product / Technical Issues,0.0131,51.98,Stable
+C06882,CT006882,2025-03-29,Business / Budget Constraints,0.008,44.91,Declining
+C02847,CT002847,2025-03-23,Lack of Required Features,0.0089,51.04,Declining
+C01729,CT001729,2025-07-26,Business / Budget Constraints,0.0037,75.54,Stable
+C13454,CT013454,2025-11-11,Low Product Engagement,0.0744,10.08,Rapidly Declining
+C11230,CT011230,2024-08-05,Lack of Required Features,0.0027,52.12,Stable
+C06445,CT006445,2024-05-01,Low Product Engagement,0.0014,82.74,Stable
+C02843,CT002843,2025-05-22,Product / Technical Issues,0.0053,67.31,Stable
+C03293,CT003293,2024-10-13,Low Product Engagement,0.0034,72.11,Stable
+C18435,CT018435,2024-05-01,Product / Technical Issues,0.0109,29.67,Declining
+C08145,CT008145,2024-11-06,Poor Customer Experience,0.009,44.9,Declining
+C16502,CT016502,2025-11-29,Contract / Renewal Decision,0.0032,80.19,Stable
+C12876,CT012876,2024-12-04,Product / Technical Issues,0.0084,42.91,Declining
+C19944,CT019944,2025-04-08,Poor Customer Experience,0.0366,19.69,Rapidly Declining
+C02097,CT002097,2025-05-11,Contract / Renewal Decision,0.0028,87.25,Stable
+C00027,CT000027,2025-06-13,Lack of Required Features,0.0572,7.34,Rapidly Declining
+C12937,CT012937,2025-02-25,Lack of Required Features,0.0051,75.16,Stable
+C17279,CT017279,2024-06-28,Low Product Engagement,0.0122,55.26,Rapidly Declining
+C00766,CT000766,2024-12-11,Product / Technical Issues,0.0404,11.47,Rapidly Declining
+C08515,CT008515,2025-09-25,Contract / Renewal Decision,0.0196,51.22,Declining
+C01132,CT001132,2025-04-02,Low Product Engagement,0.0317,43.4,Declining
+C00716,CT000716,2024-10-24,Lack of Required Features,0.0028,49.59,Stable
+C19727,CT019727,2025-02-28,Lack of Required Features,0.0249,35.11,Declining
+C07174,CT007174,2025-11-15,Poor Customer Experience,0.0416,1.72,Rapidly Declining
+C13811,CT013811,2025-01-02,Poor Customer Experience,0.0831,4.47,Rapidly Declining
+C19052,CT019052,2024-04-20,Contract / Renewal Decision,0.014,61.97,Declining
+C00422,CT000422,2025-11-17,Product / Technical Issues,0.0096,40.26,Declining
+C18338,CT018338,2025-08-15,Business / Budget Constraints,0.0062,44.39,Declining
+C00161,CT000161,2025-09-13,Contract / Renewal Decision,0.0272,24.6,Declining
+C08355,CT008355,2025-09-21,Poor Customer Experience,0.0035,48.53,Stable
+C18162,CT018162,2025-08-01,Poor Customer Experience,0.0759,0.0,Rapidly Declining
+C04896,CT004896,2025-09-01,Low Product Engagement,0.018,50.69,Declining
+C05142,CT005142,2024-09-01,Poor Customer Experience,0.0191,12.8,Declining
+C14443,CT014443,2025-12-02,Business / Budget Constraints,0.0078,35.11,Stable
+C15108,CT015108,2025-07-05,Poor Customer Experience,0.0105,50.35,Declining
+C08307,CT008307,2024-11-29,Product / Technical Issues,0.0053,62.14,Stable
+C13703,CT013703,2025-10-08,Low Product Engagement,0.0031,96.42,Stable
+C17910,CT017910,2025-10-14,Lack of Required Features,0.0006,94.48,Stable
+C06988,CT006988,2024-09-29,Poor Customer Experience,0.0017,84.93,Stable
+C10630,CT010630,2025-07-23,Contract / Renewal Decision,0.0316,28.77,Rapidly Declining
+C17936,CT017936,2025-11-05,Low Product Engagement,0.0187,28.31,Declining
+C16423,CT016423,2025-05-26,Poor Customer Experience,0.0052,69.16,Declining
+C03346,CT003346,2024-09-05,Product / Technical Issues,0.0133,36.43,Declining
+C00019,CT000019,2024-10-22,Product / Technical Issues,0.0014,73.81,Stable
+C04070,CT004070,2025-06-30,Lack of Required Features,0.0021,58.84,Stable
+C08129,CT008129,2024-10-29,Business / Budget Constraints,0.0219,38.98,Declining
+C17574,CT017574,2024-11-21,Product / Technical Issues,0.0062,62.77,Declining
+C18552,CT018552,2024-12-16,Low Product Engagement,0.0017,97.58,Improving
+C09764,CT009764,2025-11-19,Contract / Renewal Decision,0.0378,35.35,Declining
+C13581,CT013581,2024-07-29,Lack of Required Features,0.0033,88.1,Stable
+C08833,CT008833,2024-11-21,Business / Budget Constraints,0.0419,18.19,Rapidly Declining
+C10793,CT010793,2025-11-02,Contract / Renewal Decision,0.0332,47.6,Declining
+C06124,CT006124,2025-07-22,Contract / Renewal Decision,0.0008,99.58,Improving
+C13482,CT013482,2024-05-11,Poor Customer Experience,0.0028,87.52,Stable
+C13135,CT013135,2025-02-11,Business / Budget Constraints,0.0032,73.67,Stable
+C06644,CT006644,2025-09-28,Low Product Engagement,0.0343,3.54,Rapidly Declining
+C03150,CT003150,2024-05-27,Low Product Engagement,0.0671,38.59,Rapidly Declining
+C13226,CT013226,2025-11-14,Poor Customer Experience,0.0206,45.33,Declining
+C05023,CT005023,2024-12-12,Business / Budget Constraints,0.0012,68.41,Stable
+C19207,CT019207,2024-08-31,Lack of Required Features,0.0283,55.94,Rapidly Declining
+C10198,CT010198,2025-07-10,Low Product Engagement,0.0089,30.9,Declining
+C14527,CT014527,2025-04-22,Low Product Engagement,0.0055,40.82,Declining
+C01188,CT001188,2025-11-20,Lack of Required Features,0.0008,79.71,Stable
+C17552,CT017552,2025-06-24,Low Product Engagement,0.0948,0.42,Rapidly Declining
+C07089,CT007089,2025-08-09,Poor Customer Experience,0.0648,1.07,Rapidly Declining
+C01995,CT001995,2024-12-19,Lack of Required Features,0.0019,100.0,Improving
+C16337,CT016337,2024-11-19,Poor Customer Experience,0.12,25.92,Rapidly Declining
+C12340,CT012340,2026-01-05,Poor Customer Experience,0.035,9.5,Rapidly Declining
+C04257,CT004257,2025-09-30,Poor Customer Experience,0.0053,51.69,Stable
+C15285,CT015285,2024-07-26,Lack of Required Features,0.0059,72.35,Declining
+C11239,CT011239,2024-10-05,Contract / Renewal Decision,0.0014,64.34,Stable
+C10912,CT010912,2025-02-22,Contract / Renewal Decision,0.0025,65.83,Stable
+C04999,CT004999,2025-05-19,Contract / Renewal Decision,0.0035,77.99,Stable
+C16025,CT016025,2026-01-05,Contract / Renewal Decision,0.0016,59.37,Stable
+C07191,CT007191,2025-10-01,Contract / Renewal Decision,0.0466,19.57,Declining
+C14376,CT014376,2025-12-18,Product / Technical Issues,0.0166,61.25,Declining
+C13869,CT013869,2024-03-10,Contract / Renewal Decision,0.0065,62.01,Declining
+C05280,CT005280,2024-09-21,Poor Customer Experience,0.0037,67.92,Declining
+C09206,CT009206,2025-11-04,Low Product Engagement,0.0119,52.81,Declining
+C18099,CT018099,2025-06-30,Low Product Engagement,0.0164,28.63,Declining
+C09002,CT009002,2025-03-13,Low Product Engagement,0.0448,0.0,Rapidly Declining
+C01575,CT001575,2025-01-08,Poor Customer Experience,0.0098,51.06,Declining
+C03134,CT003134,2025-08-31,Poor Customer Experience,0.0141,34.44,Declining
+C03921,CT003921,2024-05-06,Poor Customer Experience,0.0085,58.05,Declining
+C03492,CT003492,2025-12-23,Lack of Required Features,0.0177,24.13,Declining
+C08261,CT008261,2024-09-24,Poor Customer Experience,0.0075,50.13,Stable
+C18991,CT018991,2025-11-06,Poor Customer Experience,0.0399,40.0,Declining
+C11273,CT011273,2025-02-03,Poor Customer Experience,0.0048,47.45,Declining
+C15191,CT015191,2025-11-09,Low Product Engagement,0.003,62.7,Stable
+C04917,CT004917,2024-07-07,Poor Customer Experience,0.0063,43.73,Declining
+C08947,CT008947,2024-10-18,Business / Budget Constraints,0.049,9.25,Rapidly Declining
+C14514,CT014514,2024-12-04,Lack of Required Features,0.0179,50.08,Declining
+C09618,CT009618,2025-05-05,Poor Customer Experience,0.0691,15.34,Rapidly Declining
+C16295,CT016295,2025-06-23,Poor Customer Experience,0.0201,32.52,Declining
+C05829,CT005829,2024-07-29,Low Product Engagement,0.0191,31.19,Rapidly Declining
+C04670,CT004670,2026-01-05,Low Product Engagement,0.0101,41.58,Declining
+C11720,CT011720,2025-12-16,Poor Customer Experience,0.0086,21.66,Declining
+C02245,CT002245,2024-09-06,Product / Technical Issues,0.0023,74.48,Stable
+C13118,CT013118,2025-10-01,Business / Budget Constraints,0.0005,90.03,Improving
+C00441,CT000441,2025-02-26,Poor Customer Experience,0.0078,21.59,Declining
+C13749,CT013749,2025-01-19,Low Product Engagement,0.0089,53.94,Declining
+C16839,CT016839,2025-04-13,Business / Budget Constraints,0.0112,56.05,Declining
+C02043,CT002043,2024-12-21,Low Product Engagement,0.0048,66.34,Declining
+C01345,CT001345,2025-01-28,Contract / Renewal Decision,0.0018,50.31,Stable
+C08016,CT008016,2025-02-21,Contract / Renewal Decision,0.0018,76.01,Stable
+C09024,CT009024,2025-10-05,Poor Customer Experience,0.0135,51.96,Declining
+C01532,CT001532,2025-02-04,Poor Customer Experience,0.0867,4.49,Rapidly Declining
+C10473,CT010473,2025-09-28,Low Product Engagement,0.0136,40.98,Declining
+C07437,CT007437,2024-09-29,Low Product Engagement,0.0043,68.4,Stable
+C14212,CT014212,2024-08-01,Low Product Engagement,0.0076,42.31,Stable
+C14745,CT014745,2024-11-04,Low Product Engagement,0.0009,99.31,Stable
+C10349,CT010349,2024-06-16,Business / Budget Constraints,0.0042,82.05,Declining
+C07240,CT007240,2024-03-21,Business / Budget Constraints,0.0062,40.44,Declining
+C04490,CT004490,2025-04-13,Contract / Renewal Decision,0.0074,74.98,Stable
+C05106,CT005106,2025-04-27,Product / Technical Issues,0.0238,35.36,Declining
+C06404,CT006404,2025-12-21,Lack of Required Features,0.0026,64.17,Stable
+C01177,CT001177,2025-02-26,Low Product Engagement,0.0047,77.19,Stable
+C18093,CT018093,2025-03-07,Contract / Renewal Decision,0.0208,58.71,Declining
+C00713,CT000713,2024-07-17,Product / Technical Issues,0.0084,44.88,Declining
+C16890,CT016890,2024-08-31,Product / Technical Issues,0.0139,28.53,Declining
+C07706,CT007706,2024-10-26,Poor Customer Experience,0.0468,13.27,Rapidly Declining
+C15549,CT015549,2025-06-09,Low Product Engagement,0.0028,37.03,Stable
+C03794,CT003794,2025-11-14,Product / Technical Issues,0.0061,77.46,Stable
+C07747,CT007747,2025-12-23,Lack of Required Features,0.0744,0.0,Rapidly Declining
+C13921,CT013921,2025-11-17,Lack of Required Features,0.0209,31.9,Declining
+C05299,CT005299,2024-12-29,Low Product Engagement,0.0289,37.45,Declining
+C08806,CT008806,2024-10-28,Product / Technical Issues,0.0033,91.1,Stable
+C14515,CT014515,2024-06-11,Contract / Renewal Decision,0.0061,48.81,Declining
+C03431,CT003431,2025-11-09,Business / Budget Constraints,0.0067,51.08,Stable
+C00391,CT000391,2025-07-12,Contract / Renewal Decision,0.0288,5.3,Declining
+C19721,CT019721,2024-12-16,Business / Budget Constraints,0.0028,87.83,Stable
+C10859,CT010859,2025-10-22,Product / Technical Issues,0.0263,26.12,Declining
+C04643,CT004643,2024-08-02,Product / Technical Issues,0.0063,63.34,Declining
+C13372,CT013372,2025-01-26,Poor Customer Experience,0.0219,44.34,Rapidly Declining
+C16394,CT016394,2024-09-07,Low Product Engagement,0.0157,23.69,Rapidly Declining
+C04022,CT004022,2024-11-05,Poor Customer Experience,0.0352,24.46,Declining
+C07743,CT007743,2025-10-08,Low Product Engagement,0.0197,12.72,Declining
+C14992,CT014992,2024-10-04,Business / Budget Constraints,0.0019,70.17,Stable
+C06833,CT006833,2025-04-21,Business / Budget Constraints,0.038,40.51,Rapidly Declining
+C16540,CT016540,2025-09-17,Low Product Engagement,0.0343,0.8,Rapidly Declining
+C06271,CT006271,2025-12-04,Product / Technical Issues,0.0154,34.0,Declining
+C04779,CT004779,2024-07-10,Business / Budget Constraints,0.0377,12.03,Rapidly Declining
+C06220,CT006220,2025-07-27,Poor Customer Experience,0.0565,17.64,Declining
+C09969,CT009969,2025-10-28,Low Product Engagement,0.0304,41.07,Declining
+C00181,CT000181,2025-07-18,Poor Customer Experience,0.0385,14.21,Rapidly Declining
+C10276,CT010276,2024-07-13,Low Product Engagement,0.0098,56.53,Declining
+C03937,CT003937,2024-10-20,Business / Budget Constraints,0.0108,51.51,Declining
+C02077,CT002077,2025-01-05,Business / Budget Constraints,0.0323,17.82,Rapidly Declining
+C08551,CT008551,2025-09-11,Business / Budget Constraints,0.0027,72.58,Stable
+C17498,CT017498,2025-07-05,Low Product Engagement,0.0105,27.55,Declining
+C02748,CT002748,2024-09-05,Low Product Engagement,0.0028,67.0,Stable
+C03375,CT003375,2024-10-23,Poor Customer Experience,0.002,82.0,Stable
+C13264,CT013264,2025-12-27,Business / Budget Constraints,0.0183,23.14,Declining
+C00842,CT000842,2024-12-09,Lack of Required Features,0.0131,52.36,Declining
+C03459,CT003459,2025-11-16,Contract / Renewal Decision,0.0016,100.0,Improving
+C06895,CT006895,2024-12-27,Product / Technical Issues,0.0744,0.0,Rapidly Declining
+C19907,CT019907,2025-06-19,Low Product Engagement,0.0435,3.38,Rapidly Declining
+C02859,CT002859,2025-11-06,Poor Customer Experience,0.0023,58.74,Stable
+C07333,CT007333,2024-07-10,Poor Customer Experience,0.0368,31.78,Rapidly Declining
+C19365,CT019365,2025-03-10,Low Product Engagement,0.0206,29.41,Declining
+C15650,CT015650,2024-11-14,Lack of Required Features,0.0119,45.32,Declining
+C15509,CT015509,2024-11-24,Business / Budget Constraints,0.0198,28.81,Declining
+C14748,CT014748,2025-05-30,Business / Budget Constraints,0.002,65.33,Stable
+C13787,CT013787,2025-06-01,Business / Budget Constraints,0.0027,62.66,Stable
+C16297,CT016297,2025-07-07,Poor Customer Experience,0.0325,40.88,Declining
+C06273,CT006273,2024-06-05,Poor Customer Experience,0.0015,81.7,Stable
+C09255,CT009255,2025-09-22,Product / Technical Issues,0.0267,0.0,Rapidly Declining
+C08891,CT008891,2026-01-02,Lack of Required Features,0.0011,97.8,Stable
+C02418,CT002418,2024-08-28,Poor Customer Experience,0.002,61.5,Stable
+C17137,CT017137,2025-12-24,Low Product Engagement,0.056,3.7,Rapidly Declining
+C10310,CT010310,2025-08-12,Low Product Engagement,0.0268,40.37,Declining
+C10352,CT010352,2025-10-30,Poor Customer Experience,0.004,47.45,Stable
+C19111,CT019111,2025-11-07,Poor Customer Experience,0.0646,0.0,Rapidly Declining
+C13350,CT013350,2025-07-31,Low Product Engagement,0.0019,63.54,Stable
+C10075,CT010075,2025-11-30,Product / Technical Issues,0.0172,23.85,Declining
+C06061,CT006061,2025-06-22,Contract / Renewal Decision,0.0203,46.06,Declining
+C00073,CT000073,2025-03-09,Low Product Engagement,0.0088,25.78,Declining
+C10481,CT010481,2024-11-29,Business / Budget Constraints,0.0032,49.72,Declining
+C05459,CT005459,2025-02-16,Poor Customer Experience,0.0024,80.24,Stable
+C04130,CT004130,2024-09-29,Contract / Renewal Decision,0.0012,61.06,Stable
+C07707,CT007707,2025-10-29,Contract / Renewal Decision,0.0461,12.75,Rapidly Declining
+C10923,CT010923,2025-10-19,Contract / Renewal Decision,0.007,41.7,Stable
+C05600,CT005600,2024-04-14,Poor Customer Experience,0.0084,53.42,Declining
+C11973,CT011973,2025-01-05,Business / Budget Constraints,0.006,43.58,Declining
+C05237,CT005237,2025-01-10,Contract / Renewal Decision,0.0412,30.98,Declining
+C07678,CT007678,2025-08-16,Low Product Engagement,0.0005,99.83,Improving
+C07330,CT007330,2024-07-22,Poor Customer Experience,0.0356,45.52,Rapidly Declining
+C09257,CT009257,2024-07-09,Business / Budget Constraints,0.0128,47.44,Declining
+C19790,CT019790,2024-10-17,Low Product Engagement,0.0214,52.55,Declining
+C09294,CT009294,2025-12-19,Business / Budget Constraints,0.0286,22.14,Declining
+C12818,CT012818,2024-06-05,Low Product Engagement,0.0216,20.45,Rapidly Declining
+C15088,CT015088,2024-08-28,Low Product Engagement,0.0305,24.49,Rapidly Declining
+C03919,CT003919,2025-03-26,Lack of Required Features,0.0015,79.97,Stable
+C16408,CT016408,2025-07-11,Business / Budget Constraints,0.0203,24.98,Declining
+C15480,CT015480,2025-11-21,Low Product Engagement,0.0217,17.13,Declining
+C14807,CT014807,2025-06-19,Business / Budget Constraints,0.025,6.95,Declining
+C04467,CT004467,2025-01-28,Contract / Renewal Decision,0.0013,81.49,Stable
+C14225,CT014225,2025-03-12,Lack of Required Features,0.018,15.61,Declining
+C17244,CT017244,2025-09-12,Contract / Renewal Decision,0.0179,8.64,Declining
+C14869,CT014869,2024-08-23,Contract / Renewal Decision,0.0018,73.52,Stable
+C17793,CT017793,2025-01-20,Contract / Renewal Decision,0.0125,67.15,Declining
+C14234,CT014234,2025-12-20,Contract / Renewal Decision,0.0012,85.38,Improving
+C10917,CT010917,2024-09-26,Low Product Engagement,0.0226,46.66,Declining
+C08959,CT008959,2025-06-28,Poor Customer Experience,0.037,16.46,Rapidly Declining
+C12092,CT012092,2025-06-19,Lack of Required Features,0.021,57.35,Declining
+C03187,CT003187,2025-06-12,Contract / Renewal Decision,0.0029,74.73,Stable
+C10569,CT010569,2025-07-28,Poor Customer Experience,0.0152,46.35,Stable
+C18346,CT018346,2024-10-27,Product / Technical Issues,0.0045,66.65,Stable
+C18258,CT018258,2025-12-01,Low Product Engagement,0.0756,24.26,Declining
+C08197,CT008197,2025-03-23,Contract / Renewal Decision,0.0006,94.22,Improving
+C18280,CT018280,2025-06-24,Business / Budget Constraints,0.0358,18.39,Rapidly Declining
+C07593,CT007593,2025-04-22,Business / Budget Constraints,0.0119,26.89,Declining
+C10776,CT010776,2025-06-16,Low Product Engagement,0.0259,55.33,Declining
+C14427,CT014427,2025-11-13,Low Product Engagement,0.008,52.23,Stable
+C18460,CT018460,2024-08-29,Business / Budget Constraints,0.0033,72.9,Stable
+C04151,CT004151,2024-12-27,Poor Customer Experience,0.0046,68.7,Stable
+C02732,CT002732,2024-10-13,Low Product Engagement,0.0201,41.88,Declining
+C19746,CT019746,2024-11-26,Product / Technical Issues,0.0229,10.98,Rapidly Declining
+C05717,CT005717,2024-07-03,Business / Budget Constraints,0.0017,59.15,Stable
+C18286,CT018286,2025-01-17,Poor Customer Experience,0.0462,33.63,Rapidly Declining
+C11151,CT011151,2025-01-30,Product / Technical Issues,0.0076,43.31,Declining
+C13758,CT013758,2024-10-18,Contract / Renewal Decision,0.003,81.26,Stable
+C18699,CT018699,2025-08-06,Poor Customer Experience,0.0231,7.64,Declining
+C13390,CT013390,2025-04-19,Low Product Engagement,0.0013,62.1,Stable
+C10003,CT010003,2025-11-22,Contract / Renewal Decision,0.0051,55.19,Stable
+C10619,CT010619,2025-01-13,Product / Technical Issues,0.0034,55.07,Declining
+C15488,CT015488,2024-04-28,Low Product Engagement,0.016,35.79,Declining
+C03999,CT003999,2025-07-06,Contract / Renewal Decision,0.0025,68.31,Stable
+C16152,CT016152,2025-02-15,Contract / Renewal Decision,0.0273,35.18,Declining
+C02716,CT002716,2025-12-25,Low Product Engagement,0.0175,17.12,Declining
+C01804,CT001804,2025-02-12,Contract / Renewal Decision,0.0042,50.31,Stable
+C03948,CT003948,2025-10-27,Contract / Renewal Decision,0.0018,100.0,Improving
+C14327,CT014327,2025-11-29,Low Product Engagement,0.0008,100.0,Improving
+C16443,CT016443,2024-12-28,Product / Technical Issues,0.0085,55.83,Declining
+C12990,CT012990,2025-11-03,Business / Budget Constraints,0.0343,0.0,Rapidly Declining
+C02002,CT002002,2024-11-02,Contract / Renewal Decision,0.0037,70.96,Stable
+C13687,CT013687,2024-08-01,Low Product Engagement,0.016,62.44,Declining
+C14074,CT014074,2025-10-31,Low Product Engagement,0.008,33.95,Declining
+C05151,CT005151,2025-02-13,Business / Budget Constraints,0.0007,99.69,Improving
+C05922,CT005922,2025-07-08,Lack of Required Features,0.0187,58.73,Declining
+C14445,CT014445,2025-11-25,Business / Budget Constraints,0.0463,2.15,Rapidly Declining
+C09953,CT009953,2025-04-28,Poor Customer Experience,0.0135,42.4,Declining
+C12777,CT012777,2025-06-12,Poor Customer Experience,0.0146,40.37,Declining
+C13868,CT013868,2025-04-10,Low Product Engagement,0.0026,56.22,Stable
+C02217,CT002217,2025-10-01,Business / Budget Constraints,0.0021,100.0,Improving
+C03266,CT003266,2025-01-22,Contract / Renewal Decision,0.0009,100.0,Improving
+C04149,CT004149,2024-09-12,Low Product Engagement,0.0065,59.75,Stable
+C18471,CT018471,2025-06-17,Contract / Renewal Decision,0.023,35.48,Declining
+C12596,CT012596,2024-10-01,Business / Budget Constraints,0.0277,20.99,Rapidly Declining
+C11795,CT011795,2025-10-07,Business / Budget Constraints,0.0016,70.07,Stable
+C11160,CT011160,2025-06-13,Contract / Renewal Decision,0.0163,55.04,Declining
+C02388,CT002388,2024-09-05,Contract / Renewal Decision,0.0013,86.33,Stable
+C00459,CT000459,2025-05-31,Low Product Engagement,0.0498,8.65,Rapidly Declining
+C02137,CT002137,2024-05-20,Business / Budget Constraints,0.0012,82.72,Stable
+C05277,CT005277,2025-09-07,Contract / Renewal Decision,0.0243,0.0,Rapidly Declining
+C06111,CT006111,2025-12-03,Low Product Engagement,0.0758,0.0,Rapidly Declining
+C07961,CT007961,2025-03-24,Poor Customer Experience,0.0058,38.98,Stable
+C13781,CT013781,2025-12-24,Lack of Required Features,0.0669,0.06,Rapidly Declining
+C17891,CT017891,2024-07-13,Contract / Renewal Decision,0.0132,41.39,Declining
+C04544,CT004544,2025-09-27,Low Product Engagement,0.0028,53.47,Stable
+C14424,CT014424,2025-10-21,Low Product Engagement,0.0014,71.3,Stable
+C07090,CT007090,2025-05-11,Business / Budget Constraints,0.004,71.18,Stable
+C04067,CT004067,2025-09-20,Poor Customer Experience,0.0445,0.0,Rapidly Declining
+C15441,CT015441,2024-11-15,Low Product Engagement,0.0156,21.89,Declining
+C02445,CT002445,2024-12-15,Product / Technical Issues,0.0043,82.94,Stable
+C08766,CT008766,2025-03-20,Product / Technical Issues,0.0212,46.7,Declining
+C02315,CT002315,2025-05-16,Low Product Engagement,0.0147,31.17,Declining
+C16407,CT016407,2025-07-04,Product / Technical Issues,0.0208,66.21,Declining
+C11361,CT011361,2025-06-21,Low Product Engagement,0.0044,74.17,Stable
+C12444,CT012444,2024-12-27,Poor Customer Experience,0.0691,16.2,Rapidly Declining
+C14301,CT014301,2025-08-23,Poor Customer Experience,0.0098,23.43,Declining
+C04496,CT004496,2024-12-31,Business / Budget Constraints,0.026,42.59,Declining
+C17283,CT017283,2025-11-26,Product / Technical Issues,0.0437,0.0,Rapidly Declining
+C14878,CT014878,2024-03-17,Poor Customer Experience,0.024,28.22,Rapidly Declining
+C12137,CT012137,2025-10-10,Low Product Engagement,0.0226,32.92,Declining
+C12138,CT012138,2025-04-17,Poor Customer Experience,0.0057,44.83,Declining
+C04239,CT004239,2025-12-24,Low Product Engagement,0.0154,30.13,Declining
+C03414,CT003414,2025-12-21,Product / Technical Issues,0.0017,75.84,Stable
+C01606,CT001606,2025-07-21,Business / Budget Constraints,0.0285,20.45,Rapidly Declining
+C10729,CT010729,2025-09-10,Low Product Engagement,0.0016,78.78,Stable
+C06580,CT006580,2025-10-11,Product / Technical Issues,0.0208,14.46,Rapidly Declining
+C02778,CT002778,2025-04-21,Low Product Engagement,0.0864,0.7,Rapidly Declining
+C12026,CT012026,2024-09-08,Business / Budget Constraints,0.0121,32.76,Rapidly Declining
+C11505,CT011505,2024-09-23,Business / Budget Constraints,0.0114,35.84,Rapidly Declining
+C15825,CT015825,2024-09-07,Low Product Engagement,0.0291,38.61,Declining
+C04754,CT004754,2025-07-23,Low Product Engagement,0.0607,4.57,Declining
+C14800,CT014800,2025-08-17,Low Product Engagement,0.013,41.11,Declining
+C06334,CT006334,2025-04-01,Contract / Renewal Decision,0.0076,36.22,Stable
+C05510,CT005510,2025-08-27,Low Product Engagement,0.0341,0.0,Rapidly Declining
+C06182,CT006182,2025-04-29,Low Product Engagement,0.0018,69.15,Stable
+C03081,CT003081,2025-02-17,Low Product Engagement,0.0282,40.33,Declining
+C10965,CT010965,2024-12-12,Poor Customer Experience,0.0467,34.67,Rapidly Declining
+C19713,CT019713,2025-11-17,Low Product Engagement,0.0129,23.76,Declining
+C16323,CT016323,2025-11-14,Product / Technical Issues,0.0021,73.97,Stable
+C01998,CT001998,2025-12-27,Poor Customer Experience,0.015,36.56,Declining
+C18244,CT018244,2025-07-25,Business / Budget Constraints,0.0165,0.0,Declining
+C09262,CT009262,2024-03-02,Contract / Renewal Decision,0.0066,60.94,Declining
+C12230,CT012230,2025-09-17,Poor Customer Experience,0.0038,62.82,Stable
+C02597,CT002597,2024-11-17,Contract / Renewal Decision,0.0116,51.16,Declining
+C17480,CT017480,2024-10-15,Poor Customer Experience,0.0008,85.54,Stable
+C02004,CT002004,2025-01-04,Product / Technical Issues,0.0147,28.17,Declining
+C18383,CT018383,2024-09-08,Business / Budget Constraints,0.0084,50.16,Declining
+C05418,CT005418,2025-08-19,Poor Customer Experience,0.0264,0.0,Rapidly Declining
+C18494,CT018494,2025-04-28,Low Product Engagement,0.0005,91.64,Stable
+C11176,CT011176,2025-02-17,Contract / Renewal Decision,0.0146,36.43,Declining
+C01205,CT001205,2025-09-20,Low Product Engagement,0.0045,66.52,Stable
+C16733,CT016733,2025-05-01,Low Product Engagement,0.0166,10.39,Declining
+C14027,CT014027,2024-10-03,Business / Budget Constraints,0.0081,86.89,Declining
+C16715,CT016715,2025-02-03,Low Product Engagement,0.021,65.2,Declining
+C03450,CT003450,2025-07-02,Contract / Renewal Decision,0.0139,20.61,Declining
+C17213,CT017213,2024-12-02,Low Product Engagement,0.0311,16.45,Rapidly Declining
+C02213,CT002213,2025-08-26,Business / Budget Constraints,0.0007,86.69,Stable
+C05470,CT005470,2025-11-30,Contract / Renewal Decision,0.0084,60.14,Declining
+C06175,CT006175,2024-08-16,Low Product Engagement,0.0007,100.0,Improving
+C03020,CT003020,2025-11-06,Low Product Engagement,0.0059,34.06,Stable
+C08732,CT008732,2025-03-04,Poor Customer Experience,0.0075,51.73,Declining
+C12064,CT012064,2025-03-04,Product / Technical Issues,0.0109,48.0,Declining
+C10718,CT010718,2025-01-12,Lack of Required Features,0.0005,100.0,Improving
+C09945,CT009945,2025-02-28,Contract / Renewal Decision,0.0562,34.86,Rapidly Declining
+C19945,CT019945,2025-03-30,Low Product Engagement,0.0056,65.07,Stable
+C17309,CT017309,2024-02-26,Contract / Renewal Decision,0.0082,33.04,Rapidly Declining
+C06527,CT006527,2024-09-09,Product / Technical Issues,0.0174,48.51,Declining
+C02231,CT002231,2024-09-07,Low Product Engagement,0.0033,80.05,Stable
+C17187,CT017187,2024-10-19,Business / Budget Constraints,0.0014,85.29,Stable
+C00600,CT000600,2024-05-25,Poor Customer Experience,0.036,21.84,Rapidly Declining
+C13402,CT013402,2025-06-04,Lack of Required Features,0.0233,15.57,Declining
+C15033,CT015033,2024-06-05,Business / Budget Constraints,0.0201,30.43,Declining
+C09013,CT009013,2025-09-05,Product / Technical Issues,0.0017,74.59,Stable
+C13065,CT013065,2025-10-30,Business / Budget Constraints,0.0113,29.3,Declining
+C01350,CT001350,2025-09-23,Low Product Engagement,0.0343,3.01,Rapidly Declining
+C05980,CT005980,2025-07-31,Poor Customer Experience,0.0413,0.0,Rapidly Declining
+C08075,CT008075,2024-06-02,Contract / Renewal Decision,0.0073,63.88,Declining
+C03169,CT003169,2025-12-15,Product / Technical Issues,0.0412,6.91,Rapidly Declining
+C15815,CT015815,2025-09-25,Product / Technical Issues,0.0538,33.95,Declining
+C14386,CT014386,2025-12-06,Low Product Engagement,0.0024,61.41,Stable
+C09035,CT009035,2025-08-25,Product / Technical Issues,0.0237,51.88,Declining
+C16068,CT016068,2025-07-01,Poor Customer Experience,0.0143,38.59,Declining
+C16226,CT016226,2025-03-20,Poor Customer Experience,0.0251,26.16,Rapidly Declining
+C02326,CT002326,2025-08-24,Product / Technical Issues,0.0022,71.98,Stable
+C19747,CT019747,2024-12-06,Contract / Renewal Decision,0.0022,68.59,Stable
+C13746,CT013746,2025-02-06,Lack of Required Features,0.0007,83.94,Stable
+C13168,CT013168,2025-01-13,Poor Customer Experience,0.0015,80.03,Stable
+C03529,CT003529,2025-04-09,Poor Customer Experience,0.0326,10.34,Declining
+C16016,CT016016,2025-05-22,Product / Technical Issues,0.0013,87.19,Stable
+C11118,CT011118,2024-11-26,Product / Technical Issues,0.003,56.0,Stable
+C08076,CT008076,2024-05-12,Product / Technical Issues,0.0106,43.1,Declining
+C08446,CT008446,2025-07-14,Product / Technical Issues,0.0024,87.15,Stable
+C13463,CT013463,2025-12-25,Business / Budget Constraints,0.0006,100.0,Improving
+C16700,CT016700,2025-08-28,Contract / Renewal Decision,0.0205,7.54,Rapidly Declining
+C00336,CT000336,2025-03-29,Lack of Required Features,0.0216,24.38,Declining
+C10798,CT010798,2025-09-11,Product / Technical Issues,0.0091,50.11,Declining
+C16174,CT016174,2025-02-20,Poor Customer Experience,0.0045,57.62,Stable
+C12848,CT012848,2024-11-24,Contract / Renewal Decision,0.0243,28.64,Rapidly Declining
+C05339,CT005339,2025-07-29,Low Product Engagement,0.0487,0.0,Rapidly Declining
+C03201,CT003201,2025-11-16,Business / Budget Constraints,0.0041,43.4,Stable
+C14260,CT014260,2024-11-08,Business / Budget Constraints,0.0104,35.41,Declining
+C16164,CT016164,2025-09-18,Poor Customer Experience,0.0017,76.33,Stable
+C10273,CT010273,2025-11-24,Lack of Required Features,0.0011,72.42,Stable
+C07635,CT007635,2025-06-19,Poor Customer Experience,0.0087,67.96,Declining
+C17379,CT017379,2025-03-04,Product / Technical Issues,0.0308,40.98,Rapidly Declining
+C06502,CT006502,2024-05-01,Business / Budget Constraints,0.0052,64.44,Declining
+C01645,CT001645,2024-04-28,Lack of Required Features,0.0192,38.35,Rapidly Declining
+C09606,CT009606,2025-03-03,Low Product Engagement,0.0016,81.92,Stable
+C08285,CT008285,2025-09-07,Poor Customer Experience,0.0035,84.54,Stable
+C07835,CT007835,2025-03-19,Poor Customer Experience,0.0243,11.49,Rapidly Declining
+C10179,CT010179,2025-05-11,Poor Customer Experience,0.0176,51.59,Declining
+C16081,CT016081,2025-05-13,Product / Technical Issues,0.0106,50.89,Declining
+C10093,CT010093,2024-11-10,Contract / Renewal Decision,0.0536,26.83,Rapidly Declining
+C10316,CT010316,2025-04-05,Business / Budget Constraints,0.0094,40.03,Declining
+C01764,CT001764,2025-06-14,Product / Technical Issues,0.0351,46.91,Declining
+C08056,CT008056,2025-08-26,Poor Customer Experience,0.002,69.81,Stable
+C14589,CT014589,2025-10-13,Low Product Engagement,0.031,22.98,Declining
+C03419,CT003419,2024-07-23,Poor Customer Experience,0.032,18.68,Rapidly Declining
+C02003,CT002003,2025-11-25,Product / Technical Issues,0.0246,0.0,Rapidly Declining
+C09629,CT009629,2025-10-10,Low Product Engagement,0.0138,27.59,Rapidly Declining
+C05657,CT005657,2024-11-28,Low Product Engagement,0.0019,41.56,Stable
+C11626,CT011626,2024-10-02,Business / Budget Constraints,0.0865,30.7,Rapidly Declining
+C12544,CT012544,2024-11-22,Product / Technical Issues,0.0046,48.85,Stable
+C19568,CT019568,2025-08-13,Contract / Renewal Decision,0.0006,100.0,Improving
+C03223,CT003223,2025-02-25,Lack of Required Features,0.0082,52.66,Stable
+C11527,CT011527,2024-07-20,Poor Customer Experience,0.0255,37.62,Rapidly Declining
+C01944,CT001944,2024-11-29,Low Product Engagement,0.0036,60.28,Stable
+C11814,CT011814,2026-01-05,Business / Budget Constraints,0.0005,98.78,Stable
+C18501,CT018501,2024-12-06,Product / Technical Issues,0.003,77.13,Stable
+C13602,CT013602,2024-11-18,Product / Technical Issues,0.0035,77.22,Stable
+C03493,CT003493,2024-09-08,Product / Technical Issues,0.0135,39.64,Declining
+C13996,CT013996,2025-10-10,Business / Budget Constraints,0.0027,95.68,Stable
+C01932,CT001932,2025-02-01,Low Product Engagement,0.0013,71.57,Stable
+C15061,CT015061,2024-04-26,Product / Technical Issues,0.0228,39.97,Declining
+C14754,CT014754,2025-09-08,Low Product Engagement,0.0016,47.08,Stable
+C08598,CT008598,2025-08-04,Business / Budget Constraints,0.0239,21.83,Rapidly Declining
+C15328,CT015328,2024-07-23,Lack of Required Features,0.003,90.5,Stable
+C03553,CT003553,2025-11-05,Product / Technical Issues,0.0941,6.9,Rapidly Declining
+C13645,CT013645,2025-06-14,Product / Technical Issues,0.004,77.89,Stable
+C18160,CT018160,2025-03-30,Product / Technical Issues,0.0206,39.8,Declining
+C17038,CT017038,2024-07-02,Business / Budget Constraints,0.0239,37.78,Declining
+C02911,CT002911,2025-04-27,Contract / Renewal Decision,0.0007,99.74,Improving
+C00696,CT000696,2025-11-19,Lack of Required Features,0.0217,36.09,Declining
+C19002,CT019002,2025-10-14,Product / Technical Issues,0.0014,88.46,Stable
+C09089,CT009089,2024-08-14,Lack of Required Features,0.0051,52.97,Stable
+C03225,CT003225,2024-11-14,Poor Customer Experience,0.0035,70.68,Stable
+C04115,CT004115,2025-09-05,Business / Budget Constraints,0.0099,27.11,Declining
+C00297,CT000297,2025-10-24,Contract / Renewal Decision,0.013,0.7,Rapidly Declining
+C16358,CT016358,2025-11-17,Low Product Engagement,0.0027,70.0,Stable
+C17935,CT017935,2025-08-09,Low Product Engagement,0.0161,33.3,Declining
+C09076,CT009076,2025-07-11,Product / Technical Issues,0.0474,0.0,Rapidly Declining
+C00676,CT000676,2024-03-13,Product / Technical Issues,0.0073,56.6,Declining
+C05228,CT005228,2025-08-31,Poor Customer Experience,0.0214,33.28,Declining
+C08776,CT008776,2025-12-05,Low Product Engagement,0.0632,0.0,Rapidly Declining
+C13550,CT013550,2024-10-03,Contract / Renewal Decision,0.0175,58.28,Declining
+C17906,CT017906,2024-11-22,Business / Budget Constraints,0.0021,75.45,Stable
+C14859,CT014859,2025-06-30,Contract / Renewal Decision,0.0023,61.37,Stable
+C12936,CT012936,2026-01-05,Poor Customer Experience,0.0128,31.08,Declining
+C08058,CT008058,2024-05-10,Business / Budget Constraints,0.0446,44.39,Rapidly Declining
+C19755,CT019755,2025-07-15,Business / Budget Constraints,0.0244,60.9,Declining
+C19127,CT019127,2025-09-10,Low Product Engagement,0.0025,100.0,Improving
+C14019,CT014019,2025-05-29,Poor Customer Experience,0.0744,0.88,Rapidly Declining
+C04222,CT004222,2024-08-19,Low Product Engagement,0.0251,42.58,Declining
+C15372,CT015372,2025-03-03,Business / Budget Constraints,0.0186,56.92,Declining
+C07629,CT007629,2025-11-03,Contract / Renewal Decision,0.0752,12.06,Declining
+C04878,CT004878,2025-05-29,Low Product Engagement,0.0249,23.56,Rapidly Declining
+C11627,CT011627,2025-05-03,Low Product Engagement,0.0571,35.1,Declining
+C06929,CT006929,2025-09-18,Lack of Required Features,0.0028,64.7,Stable
+C08937,CT008937,2025-04-06,Poor Customer Experience,0.12,10.22,Rapidly Declining
+C02598,CT002598,2024-10-20,Product / Technical Issues,0.0059,77.31,Stable
+C11233,CT011233,2025-03-31,Business / Budget Constraints,0.0046,30.09,Stable
+C06197,CT006197,2025-03-23,Product / Technical Issues,0.0017,68.24,Stable
+C06325,CT006325,2025-11-14,Business / Budget Constraints,0.0026,67.51,Stable
+C01371,CT001371,2024-10-28,Contract / Renewal Decision,0.0039,45.41,Stable
+C02594,CT002594,2024-05-07,Product / Technical Issues,0.0012,82.12,Stable
+C19773,CT019773,2025-09-06,Low Product Engagement,0.0068,79.64,Declining
+C09259,CT009259,2024-04-05,Business / Budget Constraints,0.0423,30.24,Rapidly Declining
+C09591,CT009591,2025-03-03,Poor Customer Experience,0.0183,42.59,Declining
+C05264,CT005264,2025-01-21,Contract / Renewal Decision,0.0052,44.27,Declining
+C03677,CT003677,2025-11-20,Product / Technical Issues,0.0019,62.17,Stable
+C06822,CT006822,2024-10-03,Poor Customer Experience,0.0039,52.93,Declining
+C06309,CT006309,2024-07-31,Poor Customer Experience,0.0151,65.67,Declining
+C06138,CT006138,2025-04-04,Product / Technical Issues,0.0762,16.95,Declining
+C13499,CT013499,2025-11-27,Contract / Renewal Decision,0.0031,78.93,Stable
+C08037,CT008037,2024-12-31,Product / Technical Issues,0.0032,70.53,Stable
+C03892,CT003892,2025-10-29,Product / Technical Issues,0.0029,38.68,Stable
+C02431,CT002431,2025-06-12,Low Product Engagement,0.0399,28.31,Declining
+C05942,CT005942,2024-09-07,Low Product Engagement,0.015,35.73,Declining
+C11631,CT011631,2024-07-24,Lack of Required Features,0.0201,54.62,Declining
+C03617,CT003617,2025-02-11,Low Product Engagement,0.0013,99.69,Stable
+C18495,CT018495,2025-12-22,Poor Customer Experience,0.0308,19.08,Declining
+C12389,CT012389,2026-01-05,Lack of Required Features,0.0012,86.7,Stable
+C06768,CT006768,2025-06-27,Product / Technical Issues,0.0412,4.81,Rapidly Declining
+C14925,CT014925,2025-03-21,Business / Budget Constraints,0.0008,98.82,Improving
+C08905,CT008905,2025-08-20,Business / Budget Constraints,0.01,43.48,Rapidly Declining
+C12370,CT012370,2025-02-11,Contract / Renewal Decision,0.0041,78.91,Stable
+C13089,CT013089,2025-11-12,Low Product Engagement,0.0032,50.07,Stable
+C13004,CT013004,2025-02-25,Contract / Renewal Decision,0.0025,66.48,Stable
+C19299,CT019299,2026-01-04,Business / Budget Constraints,0.0028,64.17,Stable
+C12387,CT012387,2024-11-06,Poor Customer Experience,0.0144,65.26,Declining
+C01081,CT001081,2025-05-29,Low Product Engagement,0.0183,29.61,Declining
+C06093,CT006093,2024-08-24,Product / Technical Issues,0.0025,74.69,Stable
+C12018,CT012018,2025-08-22,Low Product Engagement,0.0009,64.9,Stable
+C15907,CT015907,2024-07-29,Contract / Renewal Decision,0.0028,78.66,Stable
+C12264,CT012264,2025-08-12,Low Product Engagement,0.0192,22.74,Declining
+C17162,CT017162,2024-12-01,Low Product Engagement,0.0057,60.01,Declining
+C18607,CT018607,2024-10-15,Contract / Renewal Decision,0.0242,30.43,Rapidly Declining
+C07038,CT007038,2025-01-14,Product / Technical Issues,0.0162,27.3,Rapidly Declining
+C12058,CT012058,2025-11-13,Business / Budget Constraints,0.0069,30.62,Declining
+C12984,CT012984,2024-12-05,Product / Technical Issues,0.0033,68.57,Stable
+C07764,CT007764,2025-04-07,Poor Customer Experience,0.0141,46.45,Declining
+C16511,CT016511,2025-03-06,Business / Budget Constraints,0.0092,52.83,Declining
+C16318,CT016318,2026-01-05,Business / Budget Constraints,0.0487,0.0,Rapidly Declining
+C11857,CT011857,2025-06-22,Product / Technical Issues,0.0152,64.69,Declining
+C19352,CT019352,2024-12-27,Contract / Renewal Decision,0.0102,41.25,Declining
+C07933,CT007933,2025-09-24,Poor Customer Experience,0.0027,77.66,Stable
+C19698,CT019698,2024-10-24,Lack of Required Features,0.0046,68.96,Stable
+C19224,CT019224,2025-08-01,Contract / Renewal Decision,0.0219,20.19,Rapidly Declining
+C13546,CT013546,2025-03-17,Product / Technical Issues,0.0009,83.97,Stable
+C19922,CT019922,2025-09-21,Contract / Renewal Decision,0.0211,19.29,Declining
+C09313,CT009313,2025-11-17,Poor Customer Experience,0.0023,64.8,Stable
+C00018,CT000018,2025-07-04,Poor Customer Experience,0.0064,64.22,Stable
+C19222,CT019222,2025-09-12,Product / Technical Issues,0.017,24.86,Declining
+C09028,CT009028,2025-04-29,Low Product Engagement,0.0247,31.17,Declining
+C14725,CT014725,2024-04-14,Low Product Engagement,0.0185,49.36,Declining
+C00950,CT000950,2025-11-12,Product / Technical Issues,0.0039,43.82,Stable
+C16141,CT016141,2025-07-27,Poor Customer Experience,0.021,0.0,Rapidly Declining
+C07783,CT007783,2024-09-03,Low Product Engagement,0.0053,68.58,Stable
+C10511,CT010511,2025-05-14,Product / Technical Issues,0.013,38.48,Declining
+C13037,CT013037,2024-12-06,Product / Technical Issues,0.01,14.42,Declining
+C01827,CT001827,2025-09-27,Low Product Engagement,0.0043,68.46,Stable
+C15158,CT015158,2025-10-17,Poor Customer Experience,0.0795,6.24,Declining
+C05124,CT005124,2025-08-04,Poor Customer Experience,0.0146,31.73,Rapidly Declining
+C03033,CT003033,2025-04-20,Lack of Required Features,0.0472,0.97,Rapidly Declining
+C06250,CT006250,2025-12-15,Product / Technical Issues,0.0122,36.86,Declining
+C01854,CT001854,2025-11-10,Business / Budget Constraints,0.0103,52.68,Declining
+C17228,CT017228,2024-10-22,Product / Technical Issues,0.0095,44.58,Declining
+C07660,CT007660,2025-03-27,Lack of Required Features,0.0029,63.02,Stable
+C01256,CT001256,2025-09-26,Low Product Engagement,0.0144,46.7,Declining
+C10386,CT010386,2024-10-07,Business / Budget Constraints,0.0039,82.99,Stable
+C07502,CT007502,2025-09-16,Low Product Engagement,0.0158,26.0,Declining
+C08506,CT008506,2024-11-22,Poor Customer Experience,0.0279,43.58,Declining
+C08904,CT008904,2024-04-03,Product / Technical Issues,0.0099,42.47,Declining
+C02317,CT002317,2025-12-06,Low Product Engagement,0.0104,56.08,Stable
+C09523,CT009523,2025-04-21,Low Product Engagement,0.0021,73.84,Stable
+C11447,CT011447,2025-01-14,Contract / Renewal Decision,0.042,19.56,Rapidly Declining
+C18649,CT018649,2025-07-27,Contract / Renewal Decision,0.0294,0.0,Declining
+C11999,CT011999,2025-04-21,Low Product Engagement,0.0361,23.44,Declining
+C10863,CT010863,2025-04-20,Low Product Engagement,0.0508,12.12,Rapidly Declining
+C06699,CT006699,2025-06-06,Product / Technical Issues,0.0021,62.04,Stable
+C01836,CT001836,2025-07-26,Low Product Engagement,0.0203,48.4,Declining
+C11287,CT011287,2025-11-15,Low Product Engagement,0.0067,32.77,Declining
+C01243,CT001243,2025-12-11,Poor Customer Experience,0.03,46.36,Declining
+C01671,CT001671,2025-02-07,Contract / Renewal Decision,0.0021,98.32,Improving
+C18768,CT018768,2025-10-15,Contract / Renewal Decision,0.0217,0.0,Rapidly Declining
+C00153,CT000153,2024-09-22,Poor Customer Experience,0.015,27.28,Declining
+C14437,CT014437,2024-11-27,Poor Customer Experience,0.0036,76.23,Stable
+C15840,CT015840,2025-05-21,Poor Customer Experience,0.0667,24.06,Rapidly Declining
+C05303,CT005303,2024-12-29,Business / Budget Constraints,0.015,53.66,Declining
+C14036,CT014036,2025-06-25,Low Product Engagement,0.0131,26.82,Declining
+C07497,CT007497,2025-02-18,Low Product Engagement,0.016,39.39,Declining
+C19049,CT019049,2024-09-23,Contract / Renewal Decision,0.012,61.81,Declining
+C08508,CT008508,2024-05-16,Lack of Required Features,0.0138,38.32,Declining
+C02835,CT002835,2025-07-14,Contract / Renewal Decision,0.0337,13.36,Rapidly Declining
+C01568,CT001568,2025-12-03,Contract / Renewal Decision,0.0126,66.93,Declining
+C17091,CT017091,2026-01-05,Poor Customer Experience,0.0323,40.67,Declining
+C13339,CT013339,2025-08-14,Poor Customer Experience,0.0392,17.11,Rapidly Declining
+C10036,CT010036,2024-08-15,Low Product Engagement,0.0084,24.71,Declining
+C02912,CT002912,2025-05-29,Low Product Engagement,0.0345,43.15,Declining
+C18700,CT018700,2025-01-14,Lack of Required Features,0.044,28.43,Rapidly Declining
+C06059,CT006059,2025-10-28,Poor Customer Experience,0.0007,97.0,Stable
+C03957,CT003957,2025-01-31,Poor Customer Experience,0.0031,51.78,Declining
+C00681,CT000681,2024-11-30,Lack of Required Features,0.0025,92.53,Stable
+C07830,CT007830,2025-05-15,Business / Budget Constraints,0.005,65.21,Stable
+C00844,CT000844,2025-11-06,Poor Customer Experience,0.0068,63.42,Declining
+C02360,CT002360,2025-10-10,Business / Budget Constraints,0.0081,60.34,Stable
+C19073,CT019073,2025-03-11,Product / Technical Issues,0.0008,65.05,Stable
+C16817,CT016817,2025-03-02,Product / Technical Issues,0.0005,97.25,Stable
+C09780,CT009780,2025-08-15,Contract / Renewal Decision,0.0149,15.58,Declining
+C04287,CT004287,2024-09-05,Business / Budget Constraints,0.0021,60.57,Stable
+C00878,CT000878,2025-10-17,Product / Technical Issues,0.0494,11.26,Rapidly Declining
+C05176,CT005176,2025-04-28,Product / Technical Issues,0.002,82.31,Stable
+C00590,CT000590,2025-11-15,Contract / Renewal Decision,0.0025,97.99,Stable
+C13354,CT013354,2025-12-16,Low Product Engagement,0.002,60.61,Stable
+C18052,CT018052,2025-03-18,Business / Budget Constraints,0.0015,91.7,Stable
+C00821,CT000821,2024-09-09,Low Product Engagement,0.007,58.38,Declining
+C10154,CT010154,2025-10-02,Poor Customer Experience,0.0315,47.14,Declining
+C16769,CT016769,2024-10-26,Lack of Required Features,0.0021,100.0,Improving
+C00416,CT000416,2024-12-10,Low Product Engagement,0.0332,37.5,Declining
+C02579,CT002579,2024-07-10,Low Product Engagement,0.0053,70.15,Declining
+C05641,CT005641,2025-08-28,Product / Technical Issues,0.0173,23.79,Declining
+C15420,CT015420,2025-10-21,Business / Budget Constraints,0.0744,8.96,Rapidly Declining
+C19133,CT019133,2024-04-09,Contract / Renewal Decision,0.0163,35.99,Declining
+C00717,CT000717,2024-06-08,Lack of Required Features,0.0019,64.91,Stable
+C06016,CT006016,2025-02-16,Business / Budget Constraints,0.0046,47.15,Stable
+C11438,CT011438,2024-10-07,Business / Budget Constraints,0.0557,12.75,Rapidly Declining
+C06428,CT006428,2025-06-14,Lack of Required Features,0.0489,0.0,Rapidly Declining
+C14096,CT014096,2025-05-17,Business / Budget Constraints,0.0057,62.96,Stable
+C00505,CT000505,2024-04-11,Low Product Engagement,0.011,34.17,Declining
+C19844,CT019844,2024-10-28,Contract / Renewal Decision,0.0211,49.72,Declining
+C19015,CT019015,2025-02-13,Lack of Required Features,0.0025,69.9,Stable
+C18067,CT018067,2025-04-16,Business / Budget Constraints,0.0037,93.47,Stable
+C06890,CT006890,2024-09-15,Product / Technical Issues,0.0048,65.98,Declining
+C17054,CT017054,2025-07-30,Business / Budget Constraints,0.0031,87.43,Declining
+C01631,CT001631,2024-07-18,Low Product Engagement,0.0141,40.69,Declining
+C07936,CT007936,2025-12-11,Low Product Engagement,0.0159,42.54,Declining
+C14277,CT014277,2025-12-18,Product / Technical Issues,0.0268,37.93,Declining
+C00483,CT000483,2024-12-16,Low Product Engagement,0.0258,20.71,Rapidly Declining
+C08440,CT008440,2024-09-11,Lack of Required Features,0.011,37.93,Declining
+C19059,CT019059,2025-10-09,Poor Customer Experience,0.0747,13.8,Declining
+C02052,CT002052,2024-08-17,Poor Customer Experience,0.0053,59.15,Stable
+C17626,CT017626,2025-04-07,Lack of Required Features,0.0202,27.67,Declining
+C09099,CT009099,2025-10-22,Lack of Required Features,0.0197,30.84,Declining
+C16824,CT016824,2024-12-03,Poor Customer Experience,0.0016,53.51,Stable
+C18730,CT018730,2025-06-14,Poor Customer Experience,0.0177,35.35,Declining
+C03960,CT003960,2025-10-24,Low Product Engagement,0.0334,40.59,Declining
+C16905,CT016905,2025-11-05,Low Product Engagement,0.0072,60.82,Stable
+C09108,CT009108,2025-03-17,Product / Technical Issues,0.0018,72.77,Stable
+C08152,CT008152,2025-03-04,Lack of Required Features,0.0453,14.27,Rapidly Declining
+C11633,CT011633,2025-10-16,Low Product Engagement,0.0384,0.0,Declining
+C05833,CT005833,2025-09-17,Product / Technical Issues,0.0172,33.85,Declining
+C12786,CT012786,2025-03-27,Contract / Renewal Decision,0.0175,50.6,Declining
+C16687,CT016687,2026-01-05,Lack of Required Features,0.0048,50.66,Stable
+C17718,CT017718,2025-06-24,Low Product Engagement,0.0059,46.66,Declining
+C15213,CT015213,2025-06-16,Poor Customer Experience,0.0116,34.45,Declining
+C03418,CT003418,2025-12-25,Product / Technical Issues,0.016,55.92,Declining
+C19624,CT019624,2025-03-15,Contract / Renewal Decision,0.0233,49.9,Declining
+C00254,CT000254,2024-12-02,Business / Budget Constraints,0.0412,0.17,Rapidly Declining
+C19376,CT019376,2025-02-15,Contract / Renewal Decision,0.0015,82.26,Stable
+C11911,CT011911,2025-11-11,Low Product Engagement,0.0246,5.47,Rapidly Declining
+C10016,CT010016,2025-11-25,Product / Technical Issues,0.0024,51.9,Stable
+C18402,CT018402,2025-04-13,Business / Budget Constraints,0.0094,60.06,Declining
+C13879,CT013879,2025-11-15,Low Product Engagement,0.0014,96.73,Stable
+C01175,CT001175,2025-03-18,Lack of Required Features,0.0037,75.06,Stable
+C14759,CT014759,2025-05-18,Contract / Renewal Decision,0.0019,100.0,Improving
+C04461,CT004461,2024-04-21,Low Product Engagement,0.0046,71.7,Stable
+C17355,CT017355,2025-01-23,Contract / Renewal Decision,0.0212,31.52,Declining
+C06018,CT006018,2025-05-28,Contract / Renewal Decision,0.0082,31.98,Declining
+C13484,CT013484,2025-11-27,Lack of Required Features,0.0298,30.87,Declining
+C02649,CT002649,2025-06-18,Low Product Engagement,0.0017,62.14,Stable
+C02343,CT002343,2024-11-14,Business / Budget Constraints,0.0369,3.25,Rapidly Declining
+C15132,CT015132,2025-01-16,Low Product Engagement,0.0134,67.45,Declining
+C07033,CT007033,2025-05-21,Low Product Engagement,0.0618,10.81,Rapidly Declining
+C06186,CT006186,2025-05-15,Low Product Engagement,0.002,63.23,Stable
+C16414,CT016414,2025-12-30,Product / Technical Issues,0.0032,56.04,Stable
+C14354,CT014354,2025-07-13,Low Product Engagement,0.0165,19.41,Declining
+C00425,CT000425,2025-03-28,Low Product Engagement,0.0087,29.05,Declining
+C13149,CT013149,2024-09-28,Poor Customer Experience,0.0055,57.54,Stable
+C11148,CT011148,2025-07-03,Poor Customer Experience,0.0575,5.37,Declining
+C01550,CT001550,2025-06-27,Contract / Renewal Decision,0.0029,65.91,Stable
+C04389,CT004389,2024-09-08,Poor Customer Experience,0.0041,46.22,Stable
+C15873,CT015873,2025-05-12,Lack of Required Features,0.0099,46.19,Declining
+C03292,CT003292,2025-10-28,Business / Budget Constraints,0.0166,25.73,Rapidly Declining
+C01920,CT001920,2025-12-04,Lack of Required Features,0.0052,43.42,Declining
+C06506,CT006506,2024-12-05,Business / Budget Constraints,0.0026,91.52,Stable
+C19823,CT019823,2025-05-17,Low Product Engagement,0.0156,54.79,Declining
+C14647,CT014647,2025-01-23,Poor Customer Experience,0.0093,59.7,Declining
+C10331,CT010331,2025-12-08,Product / Technical Issues,0.0088,61.44,Stable
+C13544,CT013544,2025-03-22,Product / Technical Issues,0.0263,24.04,Rapidly Declining
+C06874,CT006874,2024-06-27,Product / Technical Issues,0.0034,78.37,Stable
+C11754,CT011754,2025-11-18,Product / Technical Issues,0.0294,0.0,Rapidly Declining
+C09701,CT009701,2025-06-18,Business / Budget Constraints,0.0186,39.9,Declining
+C09849,CT009849,2025-09-30,Contract / Renewal Decision,0.0577,36.63,Declining
+C18937,CT018937,2025-06-01,Poor Customer Experience,0.004,52.42,Stable
+C06196,CT006196,2025-04-28,Contract / Renewal Decision,0.12,24.55,Rapidly Declining
+C18661,CT018661,2025-05-21,Contract / Renewal Decision,0.0013,100.0,Stable
+C01437,CT001437,2024-09-11,Product / Technical Issues,0.0027,71.61,Stable
+C06130,CT006130,2025-04-09,Product / Technical Issues,0.048,0.34,Rapidly Declining
+C15094,CT015094,2025-12-17,Poor Customer Experience,0.0279,0.28,Rapidly Declining
+C03447,CT003447,2025-08-16,Contract / Renewal Decision,0.005,50.24,Stable
+C07167,CT007167,2025-10-15,Contract / Renewal Decision,0.0083,53.63,Declining
+C08530,CT008530,2025-03-30,Product / Technical Issues,0.0088,47.9,Declining
+C15618,CT015618,2025-03-12,Poor Customer Experience,0.0302,41.93,Declining
+C08624,CT008624,2025-11-16,Business / Budget Constraints,0.0096,44.61,Declining
+C00587,CT000587,2025-06-20,Poor Customer Experience,0.0179,15.82,Declining
+C19921,CT019921,2024-09-21,Low Product Engagement,0.0208,44.17,Declining
+C12933,CT012933,2025-02-22,Low Product Engagement,0.0067,48.04,Stable
+C06795,CT006795,2025-03-28,Poor Customer Experience,0.0043,68.24,Stable
+C19858,CT019858,2024-10-10,Low Product Engagement,0.0317,31.48,Rapidly Declining
+C11907,CT011907,2024-12-05,Low Product Engagement,0.0066,48.51,Declining
+C18594,CT018594,2025-01-04,Lack of Required Features,0.01,46.81,Declining
+C03969,CT003969,2025-10-23,Poor Customer Experience,0.0086,55.14,Stable
+C18295,CT018295,2025-08-29,Lack of Required Features,0.0005,100.0,Stable
+C19778,CT019778,2024-09-02,Product / Technical Issues,0.0351,36.46,Declining
+C17946,CT017946,2025-08-15,Poor Customer Experience,0.0371,0.0,Rapidly Declining
+C11422,CT011422,2025-05-25,Business / Budget Constraints,0.006,63.09,Stable
+C10831,CT010831,2025-05-06,Low Product Engagement,0.0014,80.57,Stable
+C09059,CT009059,2025-06-13,Low Product Engagement,0.0305,26.69,Declining
+C10687,CT010687,2024-06-19,Contract / Renewal Decision,0.0558,13.33,Rapidly Declining
+C07725,CT007725,2025-10-29,Low Product Engagement,0.0047,52.59,Declining
+C16584,CT016584,2024-02-01,Low Product Engagement,0.0094,56.33,Rapidly Declining
+C09168,CT009168,2025-05-03,Business / Budget Constraints,0.0163,34.48,Declining
+C09412,CT009412,2024-12-03,Low Product Engagement,0.0024,75.91,Stable
+C11607,CT011607,2026-01-03,Poor Customer Experience,0.0005,98.98,Improving
+C19130,CT019130,2024-09-18,Low Product Engagement,0.0533,36.53,Rapidly Declining
+C14030,CT014030,2024-09-25,Poor Customer Experience,0.0074,60.6,Declining
+C17622,CT017622,2024-08-16,Poor Customer Experience,0.03,37.63,Declining
+C08443,CT008443,2024-10-02,Poor Customer Experience,0.0092,60.0,Declining
+C06183,CT006183,2025-10-15,Business / Budget Constraints,0.0206,10.15,Declining
+C06454,CT006454,2025-08-30,Lack of Required Features,0.013,42.1,Declining
+C05921,CT005921,2024-10-23,Low Product Engagement,0.0197,33.95,Declining
+C10978,CT010978,2024-08-22,Contract / Renewal Decision,0.0079,52.93,Declining
+C13867,CT013867,2025-10-26,Product / Technical Issues,0.0278,23.56,Declining
+C05388,CT005388,2025-10-14,Product / Technical Issues,0.0118,39.01,Declining
+C09463,CT009463,2024-08-09,Business / Budget Constraints,0.021,50.0,Declining
+C17133,CT017133,2025-12-15,Low Product Engagement,0.0005,100.0,Improving
+C05797,CT005797,2026-01-01,Contract / Renewal Decision,0.0151,39.35,Declining
+C08371,CT008371,2025-04-04,Poor Customer Experience,0.0083,49.13,Stable
+C08203,CT008203,2025-10-15,Poor Customer Experience,0.0744,6.35,Rapidly Declining
+C17297,CT017297,2025-07-22,Low Product Engagement,0.0145,67.58,Declining
+C02187,CT002187,2025-09-24,Product / Technical Issues,0.0026,56.75,Stable
+C15407,CT015407,2025-03-07,Poor Customer Experience,0.0165,31.19,Declining
+C07697,CT007697,2024-12-11,Contract / Renewal Decision,0.0207,34.87,Declining
+C08862,CT008862,2024-10-16,Low Product Engagement,0.0087,48.3,Declining
+C10972,CT010972,2024-08-23,Product / Technical Issues,0.0014,57.83,Stable
+C17256,CT017256,2025-11-30,Contract / Renewal Decision,0.0109,55.26,Declining
+C10855,CT010855,2025-01-26,Contract / Renewal Decision,0.0011,68.18,Stable
+C03656,CT003656,2025-08-17,Low Product Engagement,0.0017,87.15,Stable
+C16248,CT016248,2024-08-12,Low Product Engagement,0.0343,12.06,Rapidly Declining
+C05519,CT005519,2024-10-16,Low Product Engagement,0.0146,63.63,Declining
+C19505,CT019505,2025-07-15,Product / Technical Issues,0.0309,19.85,Rapidly Declining
+C05773,CT005773,2025-11-30,Low Product Engagement,0.0032,71.87,Stable
+C18381,CT018381,2025-07-06,Product / Technical Issues,0.003,52.57,Stable
+C09723,CT009723,2024-09-08,Low Product Engagement,0.0197,15.69,Declining
+C05464,CT005464,2025-08-18,Product / Technical Issues,0.028,14.13,Rapidly Declining
+C01992,CT001992,2025-02-24,Product / Technical Issues,0.0381,36.99,Declining
+C11781,CT011781,2025-08-27,Low Product Engagement,0.0257,48.63,Declining
+C15018,CT015018,2024-10-19,Lack of Required Features,0.0008,73.86,Stable
+C11052,CT011052,2025-12-29,Low Product Engagement,0.0892,0.0,Rapidly Declining
+C00034,CT000034,2025-03-23,Low Product Engagement,0.0086,59.13,Declining
+C03079,CT003079,2025-11-24,Product / Technical Issues,0.0752,1.86,Rapidly Declining
+C02155,CT002155,2025-01-09,Product / Technical Issues,0.0055,64.85,Declining
+C06098,CT006098,2025-12-24,Low Product Engagement,0.0179,32.0,Declining
+C09964,CT009964,2025-11-12,Product / Technical Issues,0.0016,76.9,Stable
+C10943,CT010943,2024-09-22,Low Product Engagement,0.0062,52.41,Stable
+C12703,CT012703,2025-07-18,Low Product Engagement,0.0199,14.51,Rapidly Declining
+C06627,CT006627,2025-10-17,Poor Customer Experience,0.004,80.23,Stable
+C12024,CT012024,2025-06-11,Product / Technical Issues,0.0022,88.84,Stable
+C06058,CT006058,2024-11-21,Lack of Required Features,0.0261,25.48,Declining
+C07976,CT007976,2025-09-08,Low Product Engagement,0.0155,29.25,Declining
+C01156,CT001156,2024-09-28,Low Product Engagement,0.0015,99.98,Improving
+C18092,CT018092,2024-07-12,Poor Customer Experience,0.0127,42.5,Declining
+C16907,CT016907,2025-05-14,Business / Budget Constraints,0.0226,29.44,Declining
+C06392,CT006392,2024-07-08,Low Product Engagement,0.0081,40.13,Declining
+C04211,CT004211,2025-04-12,Poor Customer Experience,0.0018,67.31,Stable
+C11127,CT011127,2025-03-29,Product / Technical Issues,0.0016,79.04,Stable
+C05427,CT005427,2025-04-02,Low Product Engagement,0.0064,37.12,Declining
+C02466,CT002466,2025-02-05,Product / Technical Issues,0.0024,68.02,Stable
+C14022,CT014022,2024-07-15,Poor Customer Experience,0.0151,58.7,Declining
+C06453,CT006453,2024-12-13,Low Product Engagement,0.0098,43.21,Declining
+C04442,CT004442,2024-06-27,Lack of Required Features,0.0305,34.91,Declining
+C06843,CT006843,2024-06-29,Product / Technical Issues,0.0076,70.49,Declining
+C18602,CT018602,2025-04-14,Low Product Engagement,0.0105,52.45,Declining
+C02875,CT002875,2024-08-23,Low Product Engagement,0.0484,35.02,Rapidly Declining
+C12637,CT012637,2024-12-12,Low Product Engagement,0.0008,91.54,Improving
+C12200,CT012200,2024-11-07,Poor Customer Experience,0.011,29.85,Declining
+C09051,CT009051,2025-05-18,Contract / Renewal Decision,0.0529,28.33,Declining
+C13401,CT013401,2025-06-06,Low Product Engagement,0.0257,24.79,Declining
+C08735,CT008735,2025-09-21,Poor Customer Experience,0.0035,72.42,Stable
+C18388,CT018388,2024-09-29,Low Product Engagement,0.0022,86.24,Improving
+C16562,CT016562,2024-07-29,Product / Technical Issues,0.0407,24.92,Declining
+C15078,CT015078,2024-12-07,Contract / Renewal Decision,0.0053,67.15,Declining
+C03883,CT003883,2024-11-04,Lack of Required Features,0.0147,51.77,Declining
+C04521,CT004521,2025-04-06,Product / Technical Issues,0.0171,32.76,Declining
+C01261,CT001261,2025-08-14,Lack of Required Features,0.0118,42.85,Declining
+C11078,CT011078,2024-11-09,Business / Budget Constraints,0.036,21.75,Rapidly Declining
+C19791,CT019791,2025-02-11,Low Product Engagement,0.0027,98.0,Improving
+C11315,CT011315,2024-12-31,Low Product Engagement,0.0597,20.48,Declining
+C13322,CT013322,2025-07-07,Business / Budget Constraints,0.0017,100.0,Improving
+C19570,CT019570,2024-06-16,Poor Customer Experience,0.0044,46.24,Declining
+C12583,CT012583,2024-11-18,Contract / Renewal Decision,0.0622,20.2,Rapidly Declining
+C17178,CT017178,2024-12-14,Product / Technical Issues,0.0026,78.1,Stable
+C12844,CT012844,2024-09-15,Product / Technical Issues,0.0052,59.59,Stable
+C12067,CT012067,2025-01-26,Product / Technical Issues,0.0029,63.18,Stable
+C11971,CT011971,2025-06-06,Poor Customer Experience,0.0013,80.53,Stable
+C10110,CT010110,2025-08-04,Low Product Engagement,0.014,34.69,Declining
+C02848,CT002848,2025-10-27,Contract / Renewal Decision,0.0094,45.01,Declining
+C19523,CT019523,2025-05-07,Product / Technical Issues,0.0424,37.65,Declining
+C12511,CT012511,2025-06-08,Product / Technical Issues,0.0013,99.67,Stable
+C10516,CT010516,2025-07-07,Business / Budget Constraints,0.0144,25.57,Declining
+C02240,CT002240,2025-08-02,Product / Technical Issues,0.0113,46.68,Declining
+C06601,CT006601,2025-01-06,Poor Customer Experience,0.0212,33.89,Rapidly Declining

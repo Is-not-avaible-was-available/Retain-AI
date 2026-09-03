@@ -1,0 +1,29 @@
+{
+    "feature_store": "data/processed/features.parquet",
+    "label_horizon_days": 90,
+    "train": {
+        "start": "2024-01-01",
+        "end": "2024-10-28",
+        "snapshots": 44
+    },
+    "purge_1": {
+        "start": "2024-11-04",
+        "end": "2025-01-27",
+        "snapshots": 13
+    },
+    "validation": {
+        "start": "2025-02-03",
+        "end": "2025-04-07",
+        "snapshots": 10
+    },
+    "purge_2": {
+        "start": "2025-04-14",
+        "end": "2025-07-07",
+        "snapshots": 13
+    },
+    "test": {
+        "start": "2025-07-14",
+        "end": "2025-10-06",
+        "snapshots": 13
+    }
+}

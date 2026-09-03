@@ -1,0 +1,30 @@
+{
+    "model_name": "Retain-AI Calibrated XGBoost",
+    "model_type": "XGBClassifier + Sigmoid Calibration",
+    "training_period": "2024-01-01 to 2024-10-28",
+    "validation_period": "2025-02-03 to 2025-04-07",
+    "test_period": "2025-07-14 to 2025-10-06",
+    "validation": {
+        "roc_auc": 0.8016,
+        "pr_auc": 0.2466,
+        "brier_score": 0.0467
+    },
+    "test": {
+        "roc_auc": 0.8082,
+        "pr_auc": 0.2245,
+        "brier_score": 0.0468
+    },
+    "operating_point": {
+        "default_capacity": 0.1,
+        "validation_precision": 0.2451,
+        "validation_recall": 0.4448,
+        "validation_lift": 4.4488,
+        "test_precision": 0.2388,
+        "test_recall": 0.4348,
+        "test_lift": 4.3486
+    },
+    "business_assumptions": {
+        "intervention_success_rate": 0.3,
+        "intervention_cost": 25000
+    }
+}
