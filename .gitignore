@@ -1,8 +1,49 @@
-.venv/
+@"
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*.pyo
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Jupyter
 .ipynb_checkpoints/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.log
+
+# Python packaging
+*.egg-info/
+dist/
+build/
+
+# Local environment
 .env
+.env.*
+
+# Test/cache
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Project datasets
 data/raw/
 data/processed/
-data/ml/
+"@ | Set-Content -Encoding UTF8 .gitignore
+# Local database
+*.db
