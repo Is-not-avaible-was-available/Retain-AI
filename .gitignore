@@ -42,8 +42,12 @@ build/
 .ruff_cache/
 
 # Project datasets
+# Project datasets
 data/raw/
-data/processed/
+data/processed/*
+
+# Production feature store required by Streamlit deployment
+!data/processed/features.parquet
 "@ | Set-Content -Encoding UTF8 .gitignore
 # Local database
 *.db
