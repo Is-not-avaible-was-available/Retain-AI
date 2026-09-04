@@ -1,4 +1,6 @@
 import sys
+import gc
+import time
 from pathlib import Path
 
 import numpy as np
@@ -11,15 +13,16 @@ import streamlit as st
 # ============================================================
 
 st.set_page_config(
-    page_title="Retain-AI Business Layer Diagnostic",
+    page_title="Retain-AI — Post Business Diagnostic",
     page_icon="🔬",
     layout="wide",
 )
 
-st.title("Retain-AI — Business Layer Diagnostic")
+st.title("Retain-AI — Post Business Layer Diagnostic")
 
 st.write(
-    "Testing feature store → portfolio → XGBoost → business layer."
+    "Testing the remaining Executive Overview pipeline:"
+    " Decision Engine → Historical Inference → Aggregation → Charts"
 )
 
 
@@ -43,304 +46,77 @@ if str(SRC_DIR) not in sys.path:
 
 
 # ============================================================
-# BUSINESS FUNCTIONS
+# HELPER
 # ============================================================
 
-def risk_tier(probability):
+def run_step(number, title, function):
 
-    if probability >= 0.20:
-        return "Critical"
+    st.subheader(f"{number}. {title}")
 
-    if probability >= 0.10:
-        return "High"
+    start = time.perf_counter()
 
-    if probability >= 0.05:
-        return "Moderate"
+    try:
 
-    return "Low"
+        result = function()
 
+        elapsed = time.perf_counter() - start
 
-def exposure_tier(value, thresholds):
-
-    if value >= thresholds["critical"]:
-        return "Critical"
-
-    if value >= thresholds["high"]:
-        return "High"
-
-    if value >= thresholds["moderate"]:
-        return "Moderate"
-
-    return "Low"
-
-
-def renewal_urgency(days):
-
-    if pd.isna(days):
-        return "Unknown"
-
-    days = float(days)
-
-    if days <= 30:
-        return "Critical"
-
-    if days <= 90:
-        return "High"
-
-    if days <= 180:
-        return "Moderate"
-
-    if days <= 365:
-        return "Low"
-
-    return "Very Low"
-
-
-def health_signal(row):
-
-    health = row.get(
-        "health_score",
-        np.nan
-    )
-
-    trend = row.get(
-        "health_trend",
-        np.nan
-    )
-
-    behaviour = row.get(
-        "behaviour",
-        ""
-    )
-
-    if (
-        (pd.notna(health) and health < 40)
-        or
-        (pd.notna(trend) and trend < -0.20)
-        or
-        behaviour == "Rapidly Declining"
-    ):
-        return "Account Health Intervention"
-
-    if (
-        (pd.notna(health) and health < 60)
-        or
-        (pd.notna(trend) and trend < -0.05)
-        or
-        behaviour == "Declining"
-    ):
-        return "Customer Success Monitoring"
-
-    return "Healthy"
-
-
-def usage_signal(row):
-
-    severe = row.get(
-        "severe_usage_decline_12w_flag",
-        0
-    )
-
-    decline_12 = row.get(
-        "usage_decline_12w_flag",
-        0
-    )
-
-    decline_4 = row.get(
-        "usage_decline_4w_flag",
-        0
-    )
-
-    if severe == 1:
-        return "Severe Product Engagement Risk"
-
-    if decline_12 == 1:
-        return "Product Adoption Intervention"
-
-    if decline_4 == 1:
-        return "Early Engagement Warning"
-
-    return "Stable Usage"
-
-
-def support_signal(row):
-
-    high_burden = row.get(
-        "high_support_burden_12w",
-        0
-    )
-
-    high_escalation = row.get(
-        "high_escalation_12w",
-        0
-    )
-
-    low_csat = row.get(
-        "low_csat_12w",
-        0
-    )
-
-    slow_resolution = row.get(
-        "slow_resolution_12w",
-        0
-    )
-
-    if (
-        high_burden == 1
-        or high_escalation == 1
-    ):
-        return "Technical / CX Escalation"
-
-    if (
-        low_csat == 1
-        or slow_resolution == 1
-    ):
-        return "Customer Experience Review"
-
-    return "Normal Support Profile"
-
-
-def recommended_action(row):
-
-    actions = []
-
-    health = row.get(
-        "health_score",
-        np.nan
-    )
-
-    trend = row.get(
-        "health_trend",
-        np.nan
-    )
-
-    behaviour = row.get(
-        "behaviour",
-        ""
-    )
-
-    if (
-        (pd.notna(health) and health < 40)
-        or
-        (pd.notna(trend) and trend < -0.20)
-        or
-        behaviour == "Rapidly Declining"
-    ):
-        actions.append(
-            "Account Health Review"
+        st.success(
+            f"{title} PASSED — {elapsed:.2f} seconds"
         )
 
-    if (
-        row.get(
-            "severe_usage_decline_12w_flag",
-            0
-        ) == 1
-        or
-        row.get(
-            "usage_decline_12w_flag",
-            0
-        ) == 1
-    ):
-        actions.append(
-            "Product Adoption"
+        return result
+
+    except Exception as e:
+
+        st.error(
+            f"{title} FAILED"
         )
 
-    if (
-        row.get(
-            "high_support_burden_12w",
-            0
-        ) == 1
-        or
-        row.get(
-            "high_escalation_12w",
-            0
-        ) == 1
-    ):
-        actions.append(
-            "CX / Technical Escalation"
-        )
+        st.exception(e)
 
-    days = row.get(
-        "days_to_renewal",
-        np.nan
-    )
-
-    if (
-        pd.notna(days)
-        and days <= 90
-    ):
-        actions.append(
-            "Renewal Engagement"
-        )
-
-    if not actions:
-        actions.append(
-            "Proactive Customer Monitoring"
-        )
-
-    return " • ".join(actions)
+        st.stop()
 
 
 # ============================================================
-# 1. ENVIRONMENT
+# 1. LOAD FEATURES
 # ============================================================
 
-st.subheader("1. Environment")
+def load_features():
 
-st.write(
-    "Python:",
-    sys.version.split()[0]
-)
-
-st.write(
-    "NumPy:",
-    np.__version__
-)
-
-st.write(
-    "Pandas:",
-    pd.__version__
-)
-
-
-# ============================================================
-# 2. LOAD FEATURE STORE
-# ============================================================
-
-st.subheader("2. Loading feature store")
-
-try:
-
-    features = pd.read_parquet(
+    df = pd.read_parquet(
         FEATURES_PATH
     )
 
-    features["snapshot_date"] = pd.to_datetime(
-        features["snapshot_date"]
+    df["snapshot_date"] = pd.to_datetime(
+        df["snapshot_date"]
     )
 
-    st.success(
-        f"Feature store loaded: {features.shape}"
-    )
+    return df
 
-except Exception as e:
 
-    st.error(
-        "Feature-store loading failed."
-    )
+features = run_step(
+    "1",
+    "Load Feature Store",
+    load_features,
+)
 
-    st.exception(e)
+st.write(
+    "Feature store shape:",
+    features.shape
+)
 
-    st.stop()
+st.write(
+    "Memory usage:",
+    f"{features.memory_usage(deep=True).sum() / 1024**2:.1f} MB"
+)
 
 
 # ============================================================
-# 3. PREPARE PORTFOLIO
+# 2. PREPARE LATEST PORTFOLIO
 # ============================================================
 
-st.subheader("3. Preparing latest portfolio")
-
-try:
+def prepare_portfolio():
 
     latest_date = (
         features[
@@ -365,43 +141,251 @@ try:
         errors="ignore"
     )
 
-    st.success(
-        "Portfolio prepared."
-    )
+    return portfolio, latest_date
 
-    st.write(
-        "Latest snapshot:",
-        latest_date
-    )
 
-    st.write(
-        "Portfolio shape:",
-        portfolio.shape
-    )
+portfolio, latest_date = run_step(
+    "2",
+    "Prepare Latest Portfolio",
+    prepare_portfolio,
+)
 
-    st.write(
-        "Unique customers:",
-        portfolio[
-            "customer_id"
-        ].nunique()
-    )
+st.write(
+    "Latest snapshot:",
+    latest_date
+)
 
-except Exception as e:
-
-    st.error(
-        "Portfolio preparation failed."
-    )
-
-    st.exception(e)
-
-    st.stop()
+st.write(
+    "Portfolio shape:",
+    portfolio.shape
+)
 
 
 # ============================================================
-# 4. XGBOOST
+# 3. LATEST XGBOOST INFERENCE
 # ============================================================
 
-st.subheader("4. Running XGBoost")
+def latest_inference():
+
+    from inference import (
+        predict_churn_probability
+    )
+
+    probabilities = (
+        predict_churn_probability(
+            portfolio
+        )
+    )
+
+    result = portfolio.copy()
+
+    result[
+        "churn_probability"
+    ] = probabilities
+
+    return result
+
+
+predictions = run_step(
+    "3",
+    "Latest XGBoost Inference",
+    latest_inference,
+)
+
+st.write(
+    "Predictions:",
+    len(predictions)
+)
+
+
+# ============================================================
+# 4. BUSINESS LAYER
+# ============================================================
+
+def business_layer():
+
+    result = predictions.copy()
+
+    result[
+        "revenue_at_risk"
+    ] = (
+        result[
+            "churn_probability"
+        ]
+        *
+        result[
+            "annual_contract_value"
+        ].fillna(0)
+    )
+
+    result[
+        "risk_tier"
+    ] = (
+        result[
+            "churn_probability"
+        ].apply(
+            lambda x:
+                "Critical"
+                if x >= 0.20
+                else
+                "High"
+                if x >= 0.10
+                else
+                "Moderate"
+                if x >= 0.05
+                else
+                "Low"
+        )
+    )
+
+    result[
+        "expected_save_value"
+    ] = (
+        result[
+            "revenue_at_risk"
+        ]
+        * 0.30
+    )
+
+    result[
+        "intervention_cost"
+    ] = 25_000
+
+    result[
+        "net_expected_value"
+    ] = (
+        result[
+            "expected_save_value"
+        ]
+        -
+        result[
+            "intervention_cost"
+        ]
+    )
+
+    return result
+
+
+predictions = run_step(
+    "4",
+    "Business Layer",
+    business_layer,
+)
+
+
+# ============================================================
+# 5. DECISION ENGINE
+# ============================================================
+
+def decision_engine():
+
+    from decision_engine import (
+        build_decision_engine
+    )
+
+    return build_decision_engine(
+        predictions=predictions,
+        intervention_success_rate=0.30,
+        intervention_cost=25_000,
+        intervention_capacity=0.10,
+    )
+
+
+decisions = run_step(
+    "5",
+    "Decision Engine",
+    decision_engine,
+)
+
+st.write(
+    "Decision dataset shape:",
+    decisions.shape
+)
+
+if "selected_for_intervention" in decisions.columns:
+
+    st.write(
+        "Selected for intervention:",
+        int(
+            decisions[
+                "selected_for_intervention"
+            ].sum()
+        )
+    )
+
+
+# ============================================================
+# 6. PREPARE HISTORICAL DATA
+# ============================================================
+
+def prepare_historical_data():
+
+    historical = (
+        features
+        .drop(
+            columns=[
+                "churn_90d"
+            ],
+            errors="ignore"
+        )
+        .copy()
+    )
+
+    return historical
+
+
+historical = run_step(
+    "6",
+    "Prepare Historical Inference Dataset",
+    prepare_historical_data,
+)
+
+st.write(
+    "Historical dataset shape:",
+    historical.shape
+)
+
+st.write(
+    "Historical dataset memory:",
+    f"{historical.memory_usage(deep=True).sum() / 1024**2:.1f} MB"
+)
+
+
+# ============================================================
+# 7. HISTORICAL XGBOOST — CRITICAL TEST
+# ============================================================
+
+st.subheader(
+    "7. Historical XGBoost Inference — CRITICAL TEST"
+)
+
+st.warning(
+    "This is the operation most likely to expose the Streamlit "
+    "Cloud memory/process problem. It runs the production model "
+    "across the full feature store."
+)
+
+st.write(
+    f"Rows to score: {len(historical):,}"
+)
+
+st.write(
+    "Expected snapshots:",
+    historical["snapshot_date"].nunique()
+)
+
+st.write(
+    "Expected customers:",
+    historical["customer_id"].nunique()
+)
+
+st.write(
+    "Starting historical model inference NOW..."
+)
+
+st.flush()
+
+start_time = time.perf_counter()
 
 try:
 
@@ -409,35 +393,63 @@ try:
         predict_churn_probability
     )
 
-    with st.spinner(
-        "Running calibrated XGBoost..."
-    ):
-
-        probabilities = (
-            predict_churn_probability(
-                portfolio
-            )
+    historical_probabilities = (
+        predict_churn_probability(
+            historical
         )
+    )
 
-    predictions = portfolio.copy()
-
-    predictions[
-        "churn_probability"
-    ] = probabilities
+    elapsed = (
+        time.perf_counter()
+        -
+        start_time
+    )
 
     st.success(
-        "XGBoost inference completed."
+        "Historical XGBoost inference PASSED."
+    )
+
+    st.write(
+        "Elapsed time:",
+        f"{elapsed:.2f} seconds"
     )
 
     st.write(
         "Predictions:",
-        len(probabilities)
+        len(historical_probabilities)
+    )
+
+    st.write(
+        "Min probability:",
+        float(
+            np.min(
+                historical_probabilities
+            )
+        )
+    )
+
+    st.write(
+        "Max probability:",
+        float(
+            np.max(
+                historical_probabilities
+            )
+        )
+    )
+
+    st.write(
+        "Mean probability:",
+        float(
+            np.mean(
+                historical_probabilities
+            )
+        )
     )
 
 except Exception as e:
 
     st.error(
-        "XGBoost inference failed."
+        "Historical XGBoost inference FAILED."
     )
 
     st.exception(e)
@@ -446,548 +458,276 @@ except Exception as e:
 
 
 # ============================================================
-# 5. BUSINESS LAYER
+# 8. BUILD HISTORICAL PORTFOLIO
 # ============================================================
 
-st.subheader("5. Business Layer")
+def build_historical_portfolio():
 
-business = predictions.copy()
+    result = historical.copy()
 
+    result[
+        "churn_probability"
+    ] = historical_probabilities
 
-# ------------------------------------------------------------
-# 5A. REVENUE AT RISK
-# ------------------------------------------------------------
-
-st.write("**5A. Revenue at Risk**")
-
-try:
-
-    business[
+    result[
         "revenue_at_risk"
     ] = (
-        business[
+        result[
             "churn_probability"
         ]
         *
-        business[
+        result[
             "annual_contract_value"
         ].fillna(0)
     )
 
-    st.success(
-        "Revenue at Risk calculation passed."
-    )
-
-except Exception as e:
-
-    st.error(
-        "Revenue at Risk calculation failed."
-    )
-
-    st.exception(e)
-
-    st.stop()
+    return result
 
 
-# ------------------------------------------------------------
-# 5B. RISK TIER
-# ------------------------------------------------------------
+historical_predictions = run_step(
+    "8",
+    "Build Historical Portfolio Predictions",
+    build_historical_portfolio,
+)
 
-st.write("**5B. Risk Tier**")
+st.write(
+    "Historical prediction shape:",
+    historical_predictions.shape
+)
 
-try:
 
-    business[
-        "risk_tier"
-    ] = (
-        business[
+# ============================================================
+# 9. MONTHLY RISK AGGREGATION
+# ============================================================
+
+def monthly_risk():
+
+    monthly = (
+        historical_predictions
+        .set_index(
+            "snapshot_date"
+        )[
             "churn_probability"
-        ].apply(
-            risk_tier
+        ]
+        .resample("MS")
+        .mean()
+        .dropna()
+        .to_frame(
+            "Average predicted churn risk"
         )
     )
 
-    st.success(
-        "Risk tier calculation passed."
-    )
+    return monthly
 
-    st.write(
-        business[
-            "risk_tier"
-        ].value_counts()
-    )
 
-except Exception as e:
-
-    st.error(
-        "Risk tier calculation failed."
-    )
-
-    st.exception(e)
-
-    st.stop()
-
-
-# ------------------------------------------------------------
-# 5C. EXPOSURE TIER
-# ------------------------------------------------------------
-
-st.write("**5C. Exposure Tier**")
-
-try:
-
-    thresholds = {
-
-        "moderate":
-            business[
-                "revenue_at_risk"
-            ].quantile(0.50),
-
-        "high":
-            business[
-                "revenue_at_risk"
-            ].quantile(0.75),
-
-        "critical":
-            business[
-                "revenue_at_risk"
-            ].quantile(0.90),
-    }
-
-    business[
-        "exposure_tier"
-    ] = (
-        business[
-            "revenue_at_risk"
-        ].apply(
-            lambda x:
-                exposure_tier(
-                    x,
-                    thresholds
-                )
-        )
-    )
-
-    st.success(
-        "Exposure tier calculation passed."
-    )
-
-    st.write(
-        "Exposure thresholds:",
-        thresholds
-    )
-
-    st.write(
-        business[
-            "exposure_tier"
-        ].value_counts()
-    )
-
-except Exception as e:
-
-    st.error(
-        "Exposure tier calculation failed."
-    )
-
-    st.exception(e)
-
-    st.stop()
-
-
-# ------------------------------------------------------------
-# 5D. RENEWAL URGENCY
-# ------------------------------------------------------------
-
-st.write("**5D. Renewal Urgency**")
-
-try:
-
-    business[
-        "renewal_urgency"
-    ] = (
-        business[
-            "days_to_renewal"
-        ].apply(
-            renewal_urgency
-        )
-    )
-
-    st.success(
-        "Renewal urgency calculation passed."
-    )
-
-    st.write(
-        business[
-            "renewal_urgency"
-        ].value_counts()
-    )
-
-except Exception as e:
-
-    st.error(
-        "Renewal urgency calculation failed."
-    )
-
-    st.exception(e)
-
-    st.stop()
-
-
-# ------------------------------------------------------------
-# 5E. HEALTH SIGNAL
-# ------------------------------------------------------------
-
-st.write("**5E. Health Signal**")
-
-try:
-
-    business[
-        "health_signal"
-    ] = business.apply(
-        health_signal,
-        axis=1
-    )
-
-    st.success(
-        "Health signal calculation passed."
-    )
-
-    st.write(
-        business[
-            "health_signal"
-        ].value_counts()
-    )
-
-except Exception as e:
-
-    st.error(
-        "Health signal calculation failed."
-    )
-
-    st.exception(e)
-
-    st.stop()
-
-
-# ------------------------------------------------------------
-# 5F. USAGE SIGNAL
-# ------------------------------------------------------------
-
-st.write("**5F. Usage Signal**")
-
-try:
-
-    business[
-        "usage_signal"
-    ] = business.apply(
-        usage_signal,
-        axis=1
-    )
-
-    st.success(
-        "Usage signal calculation passed."
-    )
-
-    st.write(
-        business[
-            "usage_signal"
-        ].value_counts()
-    )
-
-except Exception as e:
-
-    st.error(
-        "Usage signal calculation failed."
-    )
-
-    st.exception(e)
-
-    st.stop()
-
-
-# ------------------------------------------------------------
-# 5G. SUPPORT SIGNAL
-# ------------------------------------------------------------
-
-st.write("**5G. Support Signal**")
-
-try:
-
-    business[
-        "support_signal"
-    ] = business.apply(
-        support_signal,
-        axis=1
-    )
-
-    st.success(
-        "Support signal calculation passed."
-    )
-
-    st.write(
-        business[
-            "support_signal"
-        ].value_counts()
-    )
-
-except Exception as e:
-
-    st.error(
-        "Support signal calculation failed."
-    )
-
-    st.exception(e)
-
-    st.stop()
-
-
-# ------------------------------------------------------------
-# 5H. RECOMMENDED ACTION
-# ------------------------------------------------------------
-
-st.write("**5H. Recommended Action**")
-
-try:
-
-    business[
-        "recommended_action"
-    ] = business.apply(
-        recommended_action,
-        axis=1
-    )
-
-    st.success(
-        "Recommended action calculation passed."
-    )
-
-    st.write(
-        business[
-            "recommended_action"
-        ].value_counts().head(20)
-    )
-
-except Exception as e:
-
-    st.error(
-        "Recommended action calculation failed."
-    )
-
-    st.exception(e)
-
-    st.stop()
-
-
-# ------------------------------------------------------------
-# 5I. EXPECTED SAVE VALUE
-# ------------------------------------------------------------
-
-st.write("**5I. Expected Save Value**")
-
-try:
-
-    success_rate = 0.30
-
-    business[
-        "expected_save_value"
-    ] = (
-        business[
-            "revenue_at_risk"
-        ]
-        *
-        success_rate
-    )
-
-    st.success(
-        "Expected save value calculation passed."
-    )
-
-except Exception as e:
-
-    st.error(
-        "Expected save value calculation failed."
-    )
-
-    st.exception(e)
-
-    st.stop()
-
-
-# ------------------------------------------------------------
-# 5J. INTERVENTION COST
-# ------------------------------------------------------------
-
-st.write("**5J. Intervention Cost**")
-
-try:
-
-    intervention_cost = 25_000
-
-    business[
-        "intervention_cost"
-    ] = intervention_cost
-
-    st.success(
-        "Intervention cost calculation passed."
-    )
-
-except Exception as e:
-
-    st.error(
-        "Intervention cost calculation failed."
-    )
-
-    st.exception(e)
-
-    st.stop()
-
-
-# ------------------------------------------------------------
-# 5K. NET EXPECTED VALUE
-# ------------------------------------------------------------
-
-st.write("**5K. Net Expected Value**")
-
-try:
-
-    business[
-        "net_expected_value"
-    ] = (
-        business[
-            "expected_save_value"
-        ]
-        -
-        business[
-            "intervention_cost"
-        ]
-    )
-
-    st.success(
-        "Net expected value calculation passed."
-    )
-
-except Exception as e:
-
-    st.error(
-        "Net expected value calculation failed."
-    )
-
-    st.exception(e)
-
-    st.stop()
-
-
-# ------------------------------------------------------------
-# 5L. EXPECTED ROI
-# ------------------------------------------------------------
-
-st.write("**5L. Expected ROI**")
-
-try:
-
-    business[
-        "expected_roi"
-    ] = (
-        business[
-            "expected_save_value"
-        ]
-        /
-        intervention_cost
-    )
-
-    st.success(
-        "Expected ROI calculation passed."
-    )
-
-except Exception as e:
-
-    st.error(
-        "Expected ROI calculation failed."
-    )
-
-    st.exception(e)
-
-    st.stop()
-
-
-# ============================================================
-# 6. FINAL SUMMARY
-# ============================================================
-
-st.subheader("6. Business Layer Summary")
-
-st.success(
-    "ALL BUSINESS-LAYER OPERATIONS PASSED."
+monthly_risk_df = run_step(
+    "9",
+    "Monthly Risk Aggregation",
+    monthly_risk,
 )
 
 st.write(
-    "Final business dataset shape:",
-    business.shape
+    "Monthly observations:",
+    len(monthly_risk_df)
 )
-
-st.write(
-    "Total Revenue at Risk:",
-    business[
-        "revenue_at_risk"
-    ].sum()
-)
-
-st.write(
-    "Total Expected Save Value:",
-    business[
-        "expected_save_value"
-    ].sum()
-)
-
-st.write(
-    "Total Intervention Cost:",
-    business[
-        "intervention_cost"
-    ].sum()
-)
-
-st.write(
-    "Total Net Expected Value:",
-    business[
-        "net_expected_value"
-    ].sum()
-)
-
-
-# ============================================================
-# SAMPLE OUTPUT
-# ============================================================
-
-st.subheader("7. Sample Business Output")
-
-display_columns = [
-    "customer_id",
-    "segment",
-    "annual_contract_value",
-    "churn_probability",
-    "revenue_at_risk",
-    "risk_tier",
-    "exposure_tier",
-    "renewal_urgency",
-    "health_signal",
-    "usage_signal",
-    "support_signal",
-    "recommended_action",
-    "expected_save_value",
-    "net_expected_value",
-]
-
-available_columns = [
-    c for c in display_columns
-    if c in business.columns
-]
 
 st.dataframe(
-    business[
-        available_columns
-    ].head(20),
+    monthly_risk_df,
     use_container_width=True,
 )
 
+
+# ============================================================
+# 10. MONTHLY REVENUE AT RISK
+# ============================================================
+
+def monthly_exposure():
+
+    monthly = (
+        historical_predictions
+        .set_index(
+            "snapshot_date"
+        )[
+            "revenue_at_risk"
+        ]
+        .resample("MS")
+        .sum()
+        .dropna()
+        .to_frame(
+            "Revenue at Risk"
+        )
+    )
+
+    return monthly
+
+
+monthly_exposure_df = run_step(
+    "10",
+    "Monthly Revenue-at-Risk Aggregation",
+    monthly_exposure,
+)
+
+st.write(
+    "Monthly observations:",
+    len(monthly_exposure_df)
+)
+
+st.dataframe(
+    monthly_exposure_df,
+    use_container_width=True,
+)
+
+
+# ============================================================
+# 11. TREND CALCULATIONS
+# ============================================================
+
+def trend_calculations():
+
+    trend_start = (
+        historical_predictions[
+            "snapshot_date"
+        ].min()
+    )
+
+    trend_end = (
+        historical_predictions[
+            "snapshot_date"
+        ].max()
+    )
+
+    latest_month = (
+        monthly_risk_df
+        .iloc[-1, 0]
+    )
+
+    first_month = (
+        monthly_risk_df
+        .iloc[0, 0]
+    )
+
+    risk_change = (
+        latest_month
+        -
+        first_month
+    )
+
+    return (
+        trend_start,
+        trend_end,
+        latest_month,
+        first_month,
+        risk_change,
+    )
+
+
+(
+    trend_start,
+    trend_end,
+    latest_month,
+    first_month,
+    risk_change,
+) = run_step(
+    "11",
+    "Trend Calculations",
+    trend_calculations,
+)
+
+st.write(
+    "Trend window:",
+    f"{trend_start} → {trend_end}"
+)
+
+st.write(
+    "Risk change:",
+    f"{risk_change * 100:+.2f} percentage points"
+)
+
+
+# ============================================================
+# 12. STREAMLIT CHART TEST
+# ============================================================
+
+st.subheader(
+    "12. Streamlit Chart Rendering"
+)
+
+try:
+
+    st.write(
+        "Testing average predicted churn risk chart..."
+    )
+
+    st.line_chart(
+        monthly_risk_df,
+        height=280,
+    )
+
+    st.success(
+        "Average predicted churn risk chart PASSED."
+    )
+
+except Exception as e:
+
+    st.error(
+        "Average predicted churn risk chart FAILED."
+    )
+
+    st.exception(e)
+
+
+try:
+
+    st.write(
+        "Testing Revenue-at-Risk chart..."
+    )
+
+    st.line_chart(
+        monthly_exposure_df,
+        height=280,
+    )
+
+    st.success(
+        "Revenue-at-Risk chart PASSED."
+    )
+
+except Exception as e:
+
+    st.error(
+        "Revenue-at-Risk chart FAILED."
+    )
+
+    st.exception(e)
+
+
+# ============================================================
+# 13. FINAL
+# ============================================================
+
+st.subheader(
+    "13. FINAL DIAGNOSTIC RESULT"
+)
+
 st.success(
-    "Business-layer diagnostic completed successfully."
+    "POST-BUSINESS-LAYER DIAGNOSTIC COMPLETED."
+)
+
+st.write(
+    "If this entire page loads, the crash is NOT caused by:"
+)
+
+st.write(
+    """
+    • Decision Engine
+    • Historical XGBoost inference
+    • Historical aggregation
+    • Trend calculations
+    • Streamlit line charts
+    """
+)
+
+st.write(
+    "The remaining issue will therefore be in one of the "
+    "other Executive Overview / Customer Risk Explorer / "
+    "Customer 360 / Intervention Planner rendering blocks."
 )
