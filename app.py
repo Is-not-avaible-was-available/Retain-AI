@@ -1,6 +1,6 @@
 import sys
-import gc
 import time
+import gc
 from pathlib import Path
 
 import numpy as np
@@ -13,16 +13,15 @@ import streamlit as st
 # ============================================================
 
 st.set_page_config(
-    page_title="Retain-AI — Memory Diagnostic",
+    page_title="Retain-AI — Historical Inference Diagnostic",
     page_icon="🔬",
     layout="wide",
 )
 
-st.title("Retain-AI — Memory / Historical Inference Diagnostic")
+st.title("Retain-AI — Historical Inference Diagnostic")
 
 st.write(
-    "Testing whether the historical inference failure is caused "
-    "by duplicated feature-store memory."
+    "Testing production XGBoost on a controlled historical batch."
 )
 
 
@@ -68,7 +67,7 @@ st.write(
 
 
 # ============================================================
-# 2. LOAD FEATURE STORE
+# 2. LOAD FEATURES
 # ============================================================
 
 st.subheader("2. Load Feature Store")
@@ -85,19 +84,7 @@ try:
         features["snapshot_date"]
     )
 
-    elapsed = (
-        time.perf_counter()
-        -
-        start
-    )
-
-    memory_mb = (
-        features.memory_usage(
-            deep=True
-        ).sum()
-        /
-        1024**2
-    )
+    elapsed = time.perf_counter() - start
 
     st.success(
         f"Feature store loaded in {elapsed:.2f} seconds."
@@ -109,14 +96,14 @@ try:
     )
 
     st.write(
-        "Pandas memory:",
-        f"{memory_mb:.1f} MB"
+        "Memory:",
+        f"{features.memory_usage(deep=True).sum() / 1024**2:.1f} MB"
     )
 
 except Exception as e:
 
     st.error(
-        "Feature store loading failed."
+        "Feature store failed."
     )
 
     st.exception(e)
@@ -125,42 +112,43 @@ except Exception as e:
 
 
 # ============================================================
-# 3. EXTRACT SMALL BATCH
+# 3. PREPARE HISTORICAL DATA
 # ============================================================
 
-st.subheader(
-    "3. Extract 10,000-Row Batch"
-)
+st.subheader("3. Prepare Historical Dataset")
 
 try:
 
-    BATCH_SIZE = 10_000
-
-    batch = (
+    historical = (
         features
-        .iloc[:BATCH_SIZE]
+        .drop(
+            columns=[
+                "churn_90d"
+            ],
+            errors="ignore"
+        )
         .copy()
         .reset_index(drop=True)
     )
 
     st.success(
-        "10,000-row batch created."
+        "Historical dataset prepared."
     )
 
     st.write(
-        "Batch shape:",
-        batch.shape
+        "Rows:",
+        f"{len(historical):,}"
     )
 
     st.write(
-        "Batch memory:",
-        f"{batch.memory_usage(deep=True).sum() / 1024**2:.1f} MB"
+        "Columns:",
+        len(historical.columns)
     )
 
 except Exception as e:
 
     st.error(
-        "Batch creation failed."
+        "Historical dataset preparation failed."
     )
 
     st.exception(e)
@@ -169,44 +157,10 @@ except Exception as e:
 
 
 # ============================================================
-# 4. RELEASE FULL FEATURE STORE
+# 4. IMPORT MODEL
 # ============================================================
 
-st.subheader(
-    "4. Release Full Feature Store"
-)
-
-try:
-
-    del features
-
-    gc.collect()
-
-    st.success(
-        """
-Full 424,607-row feature store released from the
-Python process. Only the 10,000-row batch remains.
-"""
-    )
-
-except Exception as e:
-
-    st.error(
-        "Memory cleanup failed."
-    )
-
-    st.exception(e)
-
-    st.stop()
-
-
-# ============================================================
-# 5. IMPORT PRODUCTION INFERENCE
-# ============================================================
-
-st.subheader(
-    "5. Load Production Inference"
-)
+st.subheader("4. Load Production Inference")
 
 try:
 
@@ -230,22 +184,59 @@ except Exception as e:
 
 
 # ============================================================
-# 6. RUN XGBOOST
+# 5. CONTROLLED BATCH
 # ============================================================
 
 st.subheader(
-    "6. XGBoost Inference — Memory-Controlled Test"
+    "5. Controlled Historical Inference"
 )
 
-st.warning(
-    """
-Only 10,000 rows are being scored, and the original
-424,607-row feature store has already been deleted.
+BATCH_SIZE = 10_000
+
+st.info(
+    f"""
+Only the first {BATCH_SIZE:,} rows will be scored.
+
+This deliberately avoids scoring the entire
+424,607-row feature store.
 """
 )
 
+batch = historical.iloc[
+    :BATCH_SIZE
+].copy()
+
 st.write(
-    "Starting inference..."
+    "Batch shape:",
+    batch.shape
+)
+
+st.write(
+    "Batch snapshot range:",
+    str(
+        batch[
+            "snapshot_date"
+        ].min()
+    ),
+    "→",
+    str(
+        batch[
+            "snapshot_date"
+        ].max()
+    )
+)
+
+
+# ============================================================
+# 6. RUN CONTROLLED INFERENCE
+# ============================================================
+
+st.subheader(
+    "6. XGBoost Batch Inference"
+)
+
+st.warning(
+    "Starting production XGBoost inference on 10,000 rows..."
 )
 
 start = time.perf_counter()
@@ -265,7 +256,7 @@ try:
     )
 
     st.success(
-        "XGBoost inference PASSED."
+        "10,000-row XGBoost inference PASSED."
     )
 
     st.write(
@@ -274,34 +265,28 @@ try:
     )
 
     st.write(
-        "Prediction count:",
+        "Predictions:",
         len(probabilities)
     )
 
     st.write(
         "Minimum probability:",
         float(
-            np.min(
-                probabilities
-            )
+            np.min(probabilities)
         )
     )
 
     st.write(
         "Maximum probability:",
         float(
-            np.max(
-                probabilities
-            )
+            np.max(probabilities)
         )
     )
 
     st.write(
         "Mean probability:",
         float(
-            np.mean(
-                probabilities
-            )
+            np.mean(probabilities)
         )
     )
 
@@ -317,7 +302,7 @@ try:
 except Exception as e:
 
     st.error(
-        "XGBoost inference FAILED."
+        "10,000-row XGBoost inference FAILED."
     )
 
     st.exception(e)
@@ -326,12 +311,8 @@ except Exception as e:
 
 
 # ============================================================
-# 7. CLEANUP
+# 7. MEMORY CLEANUP
 # ============================================================
-
-st.subheader(
-    "7. Final Memory Cleanup"
-)
 
 del batch
 del probabilities
@@ -339,12 +320,12 @@ del probabilities
 gc.collect()
 
 st.success(
-    "Batch and predictions released successfully."
+    "Batch objects released and garbage collection completed."
 )
 
 
 # ============================================================
-# 8. FINAL RESULT
+# 8. FINAL
 # ============================================================
 
 st.subheader(
@@ -353,21 +334,11 @@ st.subheader(
 
 st.success(
     """
-MEMORY-CONTROLLED HISTORICAL INFERENCE TEST PASSED.
+The production model successfully processed
+a controlled 10,000-row historical batch.
 
-The production XGBoost model can score a historical
-batch when the full feature store is not simultaneously
-held in memory.
-"""
-)
-
-st.write(
-    """
-If this test passes, the production application should
-NOT perform historical inference by creating another
-full copy of the feature store.
-
-The correct production fix will be to process historical
-snapshots in memory-controlled batches.
+The next test should increase the batch size
+rather than immediately scoring the entire
+424,607-row feature store.
 """
 )
