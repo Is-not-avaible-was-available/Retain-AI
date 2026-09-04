@@ -2466,7 +2466,7 @@ if page == "Executive Overview":
 
         st.altair_chart(
             risk_trend_chart,
-            use_container_width=True,
+            width="stretch"
         )
 
     with trend_col2:
@@ -2553,7 +2553,7 @@ if page == "Executive Overview":
 
         st.altair_chart(
             exposure_trend_chart,
-            use_container_width=True,
+            width="stretch"
         )
 
     trend_start = historical_predictions["snapshot_date"].min()
@@ -2665,7 +2665,7 @@ if page == "Executive Overview":
 
         st.altair_chart(
             risk_distribution_chart,
-            use_container_width=True,
+            width="stretch"
         )
 
     with right:
@@ -2752,7 +2752,7 @@ if page == "Executive Overview":
 
         st.altair_chart(
             segment_concentration_chart,
-            use_container_width=True,
+            width="stretch"
         )
 
     st.write("")
@@ -2871,7 +2871,7 @@ if page == "Executive Overview":
 
     st.dataframe(
         display_concentration,
-        use_container_width=True,
+        width="stretch",
         hide_index=True,
     )
 
@@ -2903,7 +2903,7 @@ if page == "Executive Overview":
         generate_executive_ai = st.button(
             "Generate Executive AI Brief",
             type="primary",
-            use_container_width=True,
+            width="stretch",
             key="generate_executive_ai_brief",
         )
 
@@ -3089,7 +3089,7 @@ if page == "Executive Overview":
 
     st.dataframe(
         priority,
-        use_container_width=True,
+        width="stretch",
         hide_index=True,
     )
 
@@ -3457,7 +3457,7 @@ elif page == "Customer Risk Explorer":
 
     st.dataframe(
         table,
-        use_container_width=True,
+        width="stretch",
         hide_index=True,
         height=600,
         column_config={
@@ -3976,7 +3976,7 @@ elif page == "Customer 360":
     generate_ai_insight = st.button(
         "Generate AI Retention Insight",
         type="primary",
-        use_container_width=False,
+        width="content",
         key="generate_ai_retention_insight",
     )
 
@@ -4727,7 +4727,7 @@ elif page == "Intervention Planner":
 
     st.dataframe(
         styled_scenarios,
-        use_container_width=True,
+        width="stretch",
         hide_index=True,
         height=280,
     )
@@ -4795,7 +4795,7 @@ elif page == "Intervention Planner":
             .configure_view(fill="#FFFFFF", strokeOpacity=0)
             .configure_axis(gridColor="#E8EEF6", domainColor="#CBD7E6", tickColor="#CBD7E6", labelColor="#526784", titleColor="#405674", labelFontSize=11, titleFontSize=12)
         )
-        st.altair_chart(coverage_chart, use_container_width=True)
+        st.altair_chart(coverage_chart, width="stretch")
         st.markdown("</div>", unsafe_allow_html=True)
 
     with chart_right:
@@ -4846,7 +4846,7 @@ elif page == "Intervention Planner":
             .configure_view(fill="#FFFFFF", strokeOpacity=0)
             .configure_axis(gridColor="#E8EEF6", domainColor="#CBD7E6", tickColor="#CBD7E6", labelColor="#526784", titleColor="#405674", labelFontSize=11, titleFontSize=12)
         )
-        st.altair_chart(value_chart, use_container_width=True)
+        st.altair_chart(value_chart, width="stretch")
         st.markdown("</div>", unsafe_allow_html=True)
 
     st.write("")
@@ -4938,7 +4938,7 @@ elif page == "Intervention Planner":
             .configure_view(fill="#FFFFFF", strokeOpacity=0)
             .configure_axis(gridColor="#E8EEF6", domainColor="#CBD7E6", tickColor="#CBD7E6", labelColor="#526784", titleColor="#405674", labelFontSize=11, titleFontSize=12)
         )
-        st.altair_chart(segment_chart, use_container_width=True)
+        st.altair_chart(segment_chart, width="stretch")
         st.markdown("</div>", unsafe_allow_html=True)
 
     with composition_right:
@@ -5053,7 +5053,7 @@ elif page == "Intervention Planner":
             .configure_view(strokeOpacity=0)
             .configure_axis(gridColor="#E6EDF6")
         )
-        st.altair_chart(action_chart, use_container_width=True)
+        st.altair_chart(action_chart, width="stretch")
         st.markdown("</div>", unsafe_allow_html=True)
 
     st.write("")
@@ -5146,7 +5146,7 @@ elif page == "Intervention Planner":
 
     st.dataframe(
         priority,
-        use_container_width=True,
+        width="stretch",
         hide_index=True,
         height=600,
     )
@@ -5354,7 +5354,7 @@ elif page == "Model & Governance":
 
     st.dataframe(
         comparison_df,
-        use_container_width=True,
+        width="stretch",
         hide_index=True,
         column_config={
             "Model": st.column_config.TextColumn("Model", width="large"),
@@ -5486,7 +5486,7 @@ elif page == "Model & Governance":
 
     st.dataframe(
         assumptions_df,
-        use_container_width=True,
+        width="stretch",
         hide_index=True,
         column_config={
             "Assumption": st.column_config.TextColumn("Assumption", width="medium"),
@@ -5527,7 +5527,7 @@ elif page == "Model & Governance":
 
     st.dataframe(
         governance_df,
-        use_container_width=True,
+        width="stretch",
         hide_index=True,
         column_config={
             "Decision": st.column_config.TextColumn("Decision", width="medium"),
