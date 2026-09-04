@@ -1,4 +1,3 @@
-
 # RETAIN-AI
 # AI-Powered Customer Retention Decision Platform
 # ============================================================
@@ -1564,48 +1563,72 @@ def generate_predictions(portfolio):
 )
 def generate_historical_portfolio_predictions(features):
     """
-    Run the frozen production-calibrated XGBoost model across the
-    historical feature-store snapshots for portfolio trend analysis.
+    Run the frozen production-calibrated XGBoost model across historical
+    feature-store snapshots for portfolio trend analysis.
 
-    This is inference only: no labels are used and no model is retrained.
+    Inference is performed one weekly snapshot at a time so the deployment
+    process never creates a second full-size copy of the feature store.
+    Only the compact six-column historical result is retained.
     """
 
-    from inference import (
-        predict_churn_probability
-    )
+    import gc
 
-    historical = features.drop(
-        columns=[
-            "churn_90d"
-        ],
-        errors="ignore"
-    ).copy()
+    from inference import predict_churn_probability
 
-    probabilities = predict_churn_probability(
-        historical
-    )
+    historical_results = []
 
-    historical[
-        "churn_probability"
-    ] = probabilities
+    # IMPORTANT: never copy the entire 424k-row feature store here.
+    # Process one snapshot at a time to keep peak RAM low on Streamlit Cloud.
+    for snapshot_date, snapshot_group in features.groupby(
+        "snapshot_date",
+        sort=True,
+    ):
+        snapshot = snapshot_group.drop(
+            columns=["churn_90d"],
+            errors="ignore",
+        ).copy().reset_index(drop=True)
 
-    historical[
-        "revenue_at_risk"
-    ] = (
-        historical["churn_probability"]
-        * historical["annual_contract_value"].fillna(0)
-    )
+        probabilities = predict_churn_probability(snapshot)
 
-    return historical[
-        [
-            "customer_id",
-            "snapshot_date",
-            "segment",
-            "annual_contract_value",
-            "churn_probability",
-            "revenue_at_risk",
-        ]
-    ]
+        annual_contract_value = (
+            snapshot["annual_contract_value"]
+            .fillna(0)
+            .to_numpy()
+        )
+
+        historical_results.append(
+            pd.DataFrame(
+                {
+                    "customer_id": snapshot["customer_id"].to_numpy(),
+                    "snapshot_date": snapshot["snapshot_date"].to_numpy(),
+                    "segment": snapshot["segment"].to_numpy(),
+                    "annual_contract_value": annual_contract_value,
+                    "churn_probability": probabilities,
+                    "revenue_at_risk": probabilities * annual_contract_value,
+                }
+            )
+        )
+
+        del snapshot, probabilities, annual_contract_value
+        gc.collect()
+
+    if not historical_results:
+        return pd.DataFrame(
+            columns=[
+                "customer_id",
+                "snapshot_date",
+                "segment",
+                "annual_contract_value",
+                "churn_probability",
+                "revenue_at_risk",
+            ]
+        )
+
+    historical = pd.concat(historical_results, ignore_index=True)
+    del historical_results
+    gc.collect()
+
+    return historical
 
 
 # ============================================================
