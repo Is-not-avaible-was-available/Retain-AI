@@ -383,8 +383,6 @@ st.write(
     "Starting historical model inference NOW..."
 )
 
-st.flush()
-
 start_time = time.perf_counter()
 
 try:
