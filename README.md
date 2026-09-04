@@ -1,6 +1,6 @@
 Retain-AI
 
-AI-Powered Customer Retention Decision Platform
+AI-Powered Customer Retention Decision Platform.
 
 Retain-AI is an end-to-end customer retention intelligence platform that moves beyond churn prediction. It estimates 90-day churn risk, explains why an account is at risk, quantifies financial exposure, prioritises limited retention capacity, and generates grounded executive and customer-level AI briefs.
 
